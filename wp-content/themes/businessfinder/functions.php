@@ -77,6 +77,7 @@ function aitEnqueueScriptsAndStyles()
 		'ait-jquery-prettyPhoto'  => array('file' => "$s/prettyPhoto.css"),
 		'ait-jquery-fancybox'     => array('file' => "$s/fancybox/jquery.fancybox-1.3.4.css"),
 		'ait-jquery-hover-zoom'   => array('file' => "$s/hoverZoom.css"),
+		'ait-jquery-flexslider'   => array('file' => "$s/flexslider.css"),
 		'ait-jquery-fancycheckbox'=> array('file' => "$s/jquery.fancycheckbox.min.css"),
 		'jquery-ui-css'           => array('file' => "$s/jquery-ui-1.10.1.custom.min.css"),
 	));
@@ -100,6 +101,7 @@ function aitEnqueueScriptsAndStyles()
 		'ait-jquery-hover-zoom'       => array('file' => "$j/libs/hover.zoom.js", 'deps' => array('jquery')),
 		'ait-jquery-finished-typing'  => array('file' => "$j/libs/jquery.finishedTyping.js", 'deps' => array('jquery')),
 		'ait-jquery-jcarousel'        => array('file' => "$j/libs/jquery.jcarousel.min.js", 'deps' => array('jquery')),
+		'ait-jquery-flexslider'       => array('file' => "$j/libs/jquery.flexslider-min.js", 'deps' => array('jquery')),
 		'ait-spin-ajax-loader'        => array('file' => "$j/libs/spin.min.js"),
 		'ait-modernizr-touch'         => array('file' => "$j/libs/modernizr.touch.js"),
 		'ait-gridgallery'             => array('file' => "$j/gridgallery.js", 'deps' => array('jquery')),

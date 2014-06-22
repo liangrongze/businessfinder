@@ -19,6 +19,7 @@ $j(document).ready(function() {
 	//PrettySociableInit();
 	CloseableComments();
 	InitMisc();
+	HomeDisplayCategory();
 	//ResponsiveMenu();
 	//RollUpMenu();
 	SubmenuClass();
@@ -56,6 +57,15 @@ $j(document).ready(function() {
     langButtonClick();
 
 });
+
+function HomeDisplayCategory(){
+	$j('.sub-category-holder').flexslider({
+		animation: "slide",
+		manualControls: '.main-category a'
+	});
+	
+	$j('.ads').flexslider({animation: "slide"});
+}
 
 function ItemDetailGallery() {
 

@@ -2,7 +2,7 @@
 
 <!--[if IE 8]><html class="no-js oldie ie8 ie" lang="{$site->language}"><![endif]-->
 <!--[if IE 9]><html class="no-js oldie ie9 ie" lang="{$site->language}"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="{$site->language}"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="{$site->language}" style="background-image:url(wp-content/themes/businessfinder/design/img/home-bg.png); background-repeat:no-repeat; background-position:top center;background-attachment:fixed;background-color:white"><!--<![endif]-->
 
 	<head>
 		<meta charset="{$site->charset}">
@@ -44,11 +44,11 @@
 			];
 			{/ifset}
 
-			var catInput = $( "#dir-searchinput-category" ),
-				catInputID = $( "#dir-searchinput-category-id" ),
-				locInput = $( "#dir-searchinput-location" ),
+			// var catInput = $( "#dir-searchinput-category" ),
+				// catInputID = $( "#dir-searchinput-category-id" ),
+			var	locInput = $( "#dir-searchinput-location" ),
 				locInputID = $( "#dir-searchinput-location-id" );
-
+				/*
 			catInput.autocomplete({
 				minLength: 0,
 				source: categories,
@@ -71,6 +71,7 @@
 					.append( "<a>" + item.label + "</a>" )
 					.appendTo( ul );
 			};
+				
 			var catList = catInput.autocomplete( "widget" );
 			catList.niceScroll({ autohidemode: false });
 
@@ -79,7 +80,7 @@
 				catInputID.val('0');
 				catInput.autocomplete( "search", "" );
 			});
-
+*/
 			locInput.autocomplete({
 				minLength: 0,
 				source: locations,
@@ -146,44 +147,6 @@
 
 			{if $headerType != 'map' || isset($dirSearchNotFound) || isset($itemDetailEmpty)}
 
-			<div id="directory-search" class="regular-search"
-			data-interactive="{ifset $themeOptions->search->enableInteractiveSearch}yes{else}no{/ifset}">
-				<div class="wrapper">
-					<form action="{$homeUrl}" id="dir-search-form" method="get" class="dir-searchform">
-						
-						<div class="first-row clearfix">
-							<div class="basic-search-form clearfix">
-								<div id="dir-search-inputs">
-									<div id="dir-holder">
-										<div class="dir-holder-wrap">
-										<input type="text" name="s" id="dir-searchinput-text" placeholder="{__ 'Search keyword...'}" class="dir-searchinput"{ifset $isDirSearch} value="{$site->searchQuery}"{/ifset}>
-										<div class="reset-ajax"></div>
-
-										</div>
-									</div>
-
-									<input type="text" id="dir-searchinput-category" placeholder="{__ 'All categories'}">
-									<input type="text" name="categories" id="dir-searchinput-category-id" value="0" style="display: none;">
-
-									<input type="text" id="dir-searchinput-location" placeholder="{__ 'All locations'}">
-									<input type="text" name="locations" id="dir-searchinput-location-id" value="0" style="display: none;">
-
-								</div>
-
-								<div id="dir-search-button">
-									<input type="submit" value="{__ 'Search'}" class="dir-searchsubmit">
-								</div>
-							</div>
-							<input type="hidden" name="dir-search" value="yes" />
-						</div>
-
-						<div class="advanced-search">
-
-						</div>
-
-					</form>
-				</div>
-			</div>
 
 			{/if}
 
