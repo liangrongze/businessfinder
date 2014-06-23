@@ -22,6 +22,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-1.png">
+							<span>专业人士</span>
 						</div>
 						<div class="sub-cate-list sub-cate-person">
 							<table>
@@ -52,6 +53,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-4.png">
+							<span>投资理财</span>
 						</div>
 						<div class="sub-cate-list sub-cate-finance">
 							<table>
@@ -82,6 +84,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-2.png">
+							<span>休闲娱乐</span>
 						</div>
 						<div class="sub-cate-list sub-cate-entertaiment">
 							<table>
@@ -112,6 +115,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-5.png">
+							<span>日常修理</span>
 						</div>
 						<div class="sub-cate-list sub-cate-fix">
 							<table>
@@ -142,6 +146,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-3.png">
+							<span>生活饮食</span>
 						</div>
 						<div class="sub-cate-list sub-cate-food">
 							<table>
@@ -216,6 +221,65 @@
 	</div>
 </div>
 <!-- End section-ad-contact -->
+
+<!-- End section-newest -->
+<div class="section-newest">
+	<div class="wrapper">
+		<div class="newest-header">
+			<h3>最近更新</h3>
+			<span>186项</span>
+		</div>
+		<div class="bs-item clearfix">
+			<div class="item-detail-top">
+				<div class="item-detail-img-thumb">
+					<img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png">
+				</div>
+				<div class="item-detail-header clearfix">
+					<h3>飓风酒吧餐厅</h3>
+					<h4>Huricans' Grill & Bar Bondi Beach</h4>
+				</div>
+			</div>
+			<ul class="clearfix">
+				<li class="item-detail-addr">130 Rosoe Street, Bondi Beach, NSW 2026</li>
+				<li class="item-detail-tel">(02) 9876 0987</li>
+			</ul>
+		</div>
+		<div class="bs-item clearfix">
+			<div class="item-detail-top">
+				<div class="item-detail-img-thumb">
+					<img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png">
+				</div>
+				<div class="item-detail-header clearfix">
+					<h3>飓风酒吧餐厅</h3>
+					<h4>Huricans' Grill & Bar Bondi Beach</h4>
+				</div>
+			</div>
+			<ul class="clearfix">
+				<li class="item-detail-addr">130 Rosoe Street, Bondi Beach, NSW 2026</li>
+				<li class="item-detail-tel">(02) 9876 0987</li>
+			</ul>
+		</div>
+		<div class="newest-more">
+			<a href="">显示更多</a>
+		</div>
+	</div>
+</div>
+<!-- End section-newest -->
+
+<!-- End section-contact-mobile -->
+<div class="section-contact-mobile clearfix">
+	<div class="wrapper">
+		<ul>
+			<li><a href="" class="help">帮助</a></li>
+			<li><a href="" class="contact">联系我们</a></li>
+			<li><a href="" class="feedback">用户反馈</a></li>
+		</ul>
+	</div>
+	
+</div>
+<!-- End section-contact-mobile -->
+
+<!-- End section-subscription -->
 <div class="section-subscription clearfix">
 	<div class="wrapper">
 		<div>
@@ -228,4 +292,5 @@
 		</div>
 	</div>
 </div>
+<!-- End section-nesubscriptionwest -->
 {/block}

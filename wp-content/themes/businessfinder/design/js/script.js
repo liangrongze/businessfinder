@@ -59,10 +59,18 @@ $j(document).ready(function() {
 });
 
 function HomeDisplayCategory(){
-	$j('.sub-category-holder').flexslider({
-		animation: "slide",
-		manualControls: '.main-category a'
-	});
+	var browserWidth = $j( window ).width();
+	
+	if ( browserWidth < 800 ) {
+		$j('.sub-category-holder').flexslider({
+			animation: "slide"
+		});
+	}else{
+		$j('.sub-category-holder').flexslider({
+			animation: "slide",
+			manualControls: '.main-category a'
+		});
+	}
 	
 	$j('.ads').flexslider({animation: "slide"});
 }
