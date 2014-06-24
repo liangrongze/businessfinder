@@ -19,7 +19,6 @@ $j(document).ready(function() {
 	//PrettySociableInit();
 	CloseableComments();
 	InitMisc();
-	HomeDisplayCategory();
 	//ResponsiveMenu();
 	//RollUpMenu();
 	SubmenuClass();

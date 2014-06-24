@@ -1680,7 +1680,7 @@ a.button.add-item                           { float: none; display: inline-block
 #site-generator .foot-logo{float: right;margin: 5px 20px 5px 20px}
 #site-generator .foot-text{text-align: left;margin: 0px 20px;}
 
-.section-newest, .section-contact-mobile, .section-subscription{display:none;}
+.section-newest, .section-contact-mobile{display:none;}
 @media all and (max-width: 800px) { 
 
 	/*Header*/
@@ -1746,6 +1746,7 @@ a.button.add-item                           { float: none; display: inline-block
 	.section-contact-mobile .wrapper li .feedback {background-position: 0px -111px;}
 	
 	/* Footer */
+	.section-subscription{display:none;}
 	#site-generator{padding:15px 0;border-radius:0;}
 	#site-generator .foot-menu, #site-generator .foot-text{display:none;}
 	#site-generator .social-holder{margin-left: 0px; }
