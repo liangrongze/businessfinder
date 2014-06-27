@@ -57,6 +57,132 @@ $j(document).ready(function() {
 
 });
 
+function createSearchDropdowns () {
+	var browserWidth = $j( window ).width();
+
+	if ( browserWidth < 800 ) {
+		$j('.holder-title').click(function(){
+			$j('.holder-detail').toggle();
+			var popup = $j(this).parent();
+			if( $j(".holder-detail").is(':visible')){
+				$j(this).addClass('active');
+				$j(popup).addClass('active');				
+			}else{
+				$j(this).removeClass('active');
+				$j(popup).removeClass('active');
+			}
+		});
+		//  close
+		$j('.holder-detail .close').click(function (){
+			$j(".holder-detail").hide();
+			$j('.holder-detail').parent().removeClass('active');
+		});
+			
+		// checkbox action
+		checkboxAction();
+		
+		$j('.filter .action-title a').click(function (e){
+			e.preventDefault();
+			var target = $j(this).parent().parent().find('ul');
+			clearChceckAction(target);
+		})
+			
+		$j('.filter .expand').click(function (){
+			if( $j(this).parent().find('.collapse').is(':visible') ){
+				$j(this).parent().find('.collapse').hide();	
+				$j(this).html('更多选项');
+				/*
+				$j(this).parent().parent().find('.collapse').each(function(){
+					if( $j(this).find('input').is(':checked') ){
+						$j(this).find('input').prop('checked', false);
+						$j(this).find('.f-input').removeClass('active');
+					}
+				});		
+				*/
+			}else{
+				$j(this).parent().find('.collapse').show();	
+				$j(this).html('收起');
+			}
+		});
+	}
+	
+	    $j("select").each(function (idx) {
+	        var id = "dd" + $j(this).prop("id");
+	        if ($j('#' + id).length == 0) {
+	            var selectedText = $j('option:selected', this).text();
+	            var dropdown = '<div class="wrapper-dropdown-2" id="' + id + '"><span class="selected">' + selectedText + '</span><ul class="dropdown">';
+	            $j('option', $j(this)).each(function (idx) {
+	                if ($j(this).text() != selectedText) {
+	                    dropdown += '<li><a href="#">' + $j(this).html() + '</a></li>';
+	                }
+	            });
+	            dropdown += '</ul></div>';
+
+	            $j(this).after(dropdown);
+
+	            var dd = new DropDown($j('#' + id));
+
+	            $j(document).click(function () {
+	                // all dropdowns
+	                $j('.wrapper-dropdown-2').removeClass('active');
+	            });
+	        }
+	    });
+	
+}
+
+function clearChceckAction(obj){
+	$j(obj).find('li').each(function (){
+		if( $j(this).find('input').is(':checked') ){
+			$j(this).find('input').prop('checked', false);
+			$j(this).find('.f-input').removeClass('active');
+		}
+	})
+	
+}
+
+function checkboxAction(){
+	$j(".filter li").click(function (){
+		if( $j(this).find('input').is(':checked')){
+			$j(this).find('.f-input').removeClass('active');
+			$j(this).find('input').prop('checked', false);
+		}else{
+			$j(this).find('.f-input').addClass('active');
+			$j(this).find('input').prop('checked', true);
+		}
+	});
+}
+// Place any jQuery/helper plugins in here.
+function DropDown(el) {
+    this.dd = el;
+    this.initEvents();
+}
+
+DropDown.prototype = {
+    initEvents: function () {
+        var obj = this;
+
+        obj.dd.on('click', function (event) {
+            var $selectedText = $j(event.target).closest('div').find('.selected'),
+                $item = null;
+
+            $j('.wrapper-dropdown-2').not($j(this)).removeClass('active');
+            $j(this).toggleClass('active');
+            event.stopPropagation();
+
+            $item = $j(event.target);
+            if ($item.is('a')) {
+                $selectedText.text($item.text().trim());
+
+                // set the <select>
+                $item.closest("div").prev("select").find("option").removeAttr("selected");
+                $j("option").filter(function () { return $j(this).text().trim() == $item.text().trim(); }).prop('selected', true);
+            };
+        });
+    }
+}
+
+
 function HomeDisplayCategory(){
 	var browserWidth = $j( window ).width();
 	

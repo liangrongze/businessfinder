@@ -1538,7 +1538,7 @@ a.button.add-item                           { float: none; display: inline-block
 #footer-text                                { float: none; }
 }
 
-// Business finder
+/* Header */
 #bf_branding{background-color: #000;}
 #bf_branding .menu-container{margin-top:25px;}
 #bf_branding .menu-container ul li{display:inline;}
@@ -1603,7 +1603,7 @@ a.button.add-item                           { float: none; display: inline-block
 .main-category .cate-food>div:hover{color:#ffc000;}
 
 
-/*sub-category-holder*/
+/* Home page */
 .sub-category-holder{background:#fff;height:428px;border-radius: 10px;}
 .sub-category-holder .sub-item-holder{}
 .sub-category-holder .sub-item-holder .ad{float:left;width:40%;}
@@ -1660,6 +1660,121 @@ a.button.add-item                           { float: none; display: inline-block
 .section-subscription .wrapper p .s-button input{height: 40px;line-height: 40px;background: #ff7373;border: 0;border-radius: 10px;width: 200px;color: #fff;font-size: 18px;font-weight: bold;vertical-align: middle;}
 .section-subscription .wrapper p .s-button input:hover{background:#df5858;}
 	
+/* Category list page*/
+.section-category-form{}
+.section-category-form .wrapper{margin-top:20px;}
+.section-category-form .wrapper .category-form-holder{background: #fff;border-radius: 10px;}
+.section-category-form .wrapper .category-title{height: 45px;padding: 10px 0px 0px 15px;background: #bfbfbf;border-radius: 10px 10px 0px 0px;}
+.section-category-form .wrapper .category-title h1{font-size: 30px;font-weight: bold;color: #fff;}
+.section-category-form .wrapper .category-form{height: 50px;}
+.section-category-form .wrapper .category-form div{}
+.section-category-form .wrapper .category-form .item-search{margin: 10px;}
+.section-category-form .wrapper .category-form .item-search input{width: 100px;height: 30px;border: 0;border-radius: 15px;background: #ffc000;}
+.section-category-form .wrapper .category-form .categoty-location{}
+.section-category-form .wrapper .category-form .categoty-options{}
+.category-form-holder select{display:none;}
+
+.wrapper-dropdown-2 {	position: relative;	margin: 10px 0;	height: 30px;	background: #aa6cdd;	cursor: pointer;	outline: none;	background-size: 100%;	border-radius: 15px;	margin-left: 4px;	min-width: 120px;	transition: background-color 0.3s ease;	-webkit-transition: background-color 0.3s ease;}	
+.wrapper-dropdown-2:first-of-type {	margin-left: 10px;}
+.wrapper-dropdown-2 .selected:after {	content: " ";	width: 10px;	height: 6px;	position: absolute;	top: 12px;	right: 10px;	background: url(design/img/up-down.png);}
+.wrapper-dropdown-2 .selected {	line-height: 31px;	padding-left: 14px;	padding-right: 25px;	font: 14px/30px pns-bold;	white-space: nowrap;	overflow: hidden;	display: inline-block;	min-width: 120px;	border-radius: 15px 15px 0px 0;}
+.wrapper-dropdown-2.active .selected:after {background-position: 0 bottom;}
+.wrapper-dropdown-2 .dropdown {	position: absolute;	z-index: 200;	top: 100%;	left: 0;	right: 0px;	background: #fff;	background-size: 100% 100%;	list-style: none;	padding: 0 0 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;	transition: all 0.3s ease-out;	-webkit-transition: all 0.3s ease-out;	vertical-align: middle;	opacity: 0;	pointer-events: none;	margin: 0;	display: none;	height:160px;	overflow-y:auto;}
+.wrapper-dropdown-2 .dropdown li a {	display: block;	text-decoration: none;	color: #000;	transition: all 0.3s ease-out;	-webkit-transition: all 0.3s ease-out;	line-height: 1.3em;	padding: 7.5px 15px;	font-family: pns-medium;	font-size: 14px;}
+.wrapper-dropdown-2 .dropdown li a:hover{background:#fff;}
+.wrapper-dropdown-2.active {	background-color: #fff !important;	border-bottom-left-radius: 0;	border-bottom-right-radius: 0;}
+.wrapper-dropdown-2.active {	color: #000;}
+.wrapper-dropdown-2.active .dropdown {opacity: 1;pointer-events: auto;display: block;}
+
+/* cagtegory person*/
+.categoty-person-form-holder .wrapper-dropdown-2,
+.categoty-person-form-holder .wrapper-dropdown-2 .dropdown,
+.categoty-person-form-holder .wrapper-dropdown-2.active .selected,
+.section-category-form .wrapper .categoty-person-form-holder .category-form .item-search input {background:#07368b;}
+.categoty-person-form-holder .wrapper-dropdown-2:hover,
+.categoty-person-form-holder .category-form .item-search input:hover{background:#07368b;}
+
+/* cagtegory finance*/
+.categoty-finance-form-holder .wrapper-dropdown-2,
+.categoty-finance-form-holder .wrapper-dropdown-2 .dropdown,
+.categoty-finance-form-holder .wrapper-dropdown-2.active .selected,
+.categoty-finance-form-holder .category-form .item-search input  {background:#006714;}
+.categoty-finance-form-holder .wrapper-dropdown-2:hover,
+.categoty-finance-form-holder .category-form .item-search input:hover{background:#006714;}
+
+/* cagtegory entertaiment*/
+.categoty-entertaiment-form-holder .wrapper-dropdown-2,
+.categoty-entertaiment-form-holder .wrapper-dropdown-2 .dropdown,
+.categoty-entertaiment-form-holder .wrapper-dropdown-2.active .selected {background:#ff7f00;}
+.categoty-entertaiment-form-holder .wrapper-dropdown-2:hover,
+.categoty-entertaiment-form-holder .category-form .item-search input:hover{background:#ff7f00;}
+
+/* cagtegory fix*/
+.categoty-fix-form-holder .wrapper-dropdown-2,
+.categoty-fix-form-holder .wrapper-dropdown-2 .dropdown,
+.categoty-fix-form-holder .wrapper-dropdown-2.active .selected {background:#ff2116;}
+.categoty-fix-form-holder .wrapper-dropdown-2:hover,
+.categoty-fix-form-holder .category-form .item-search input:hover{background:#ff2116;}
+	
+/* cagtegory food*/
+.categoty-food-form-holder .wrapper-dropdown-2,
+.categoty-food-form-holder .wrapper-dropdown-2 .dropdown,
+.categoty-food-form-holder .wrapper-dropdown-2.active .selected,
+.section-category-form .wrapper .categoty-food-form-holder .category-form .item-search input{background:#e97200;}
+.categoty-food-form-holder .wrapper-dropdown-2:hover,
+.section-category-form .wrapper .categoty-food-form-holder .category-form .item-search input:hover{background:#C86D17;}
+
+.category-food-mobile-holder{display:none;margin: 0 10px;}
+.category-food-mobile-holder.active{position:fixed;top:169px;z-index:1000;overflow-y:auto;}
+.category-food-mobile-holder .holder-title{background:#fff;padding: 10px;border-radius: 10px;text-align: center;cursor:pointer;}
+.category-food-mobile-holder .holder-title.active{border-radius:10px 10px 0px 0px;}
+.category-food-mobile-holder .holder-title span{position:relative;color:#ffbc00;}
+.category-food-mobile-holder .holder-title span:before{content: " ";height: 26px;width: 36px;position: absolute;top: -4px;left: -25px;background: url(design/img/cate-food-list-icon) 0 -108px;}
+.category-food-mobile-holder .holder-title span:after{content: " ";height: 24px;width: 36px;position: absolute;top: -4px;right: -34px;background: url(design/img/cate-food-list-icon) 0 -90px;}
+.category-food-mobile-holder .holder-detail{display:none;background: #fff;padding: 25px 10px 10px 10px;position: relative;}
+.category-food-mobile-holder .holder-detail.active{}
+.category-food-mobile-holder .holder-detail .close{position: absolute;top: -30px;right: 10px;text-indent: -10000px;background: url(design/img/prettyPhoto/default/sprite.png) 2px 1px no-repeat;width: 29px;height: 28px;display: block;cursor: pointer;}
+.category-food-mobile-holder .holder-detail  .action-title{border-bottom: 1px solid #eee;padding: 10px 0px;float: left;width: 100%;}
+.category-food-mobile-holder .holder-detail  .action-title span{font-size: 15px;float: left;color: #ffbc00;}
+.category-food-mobile-holder .holder-detail  .action-title a{font-size: 14px;float: right;}
+.category-food-mobile-holder .holder-detail  .action{color: #ffbc00;padding: 15px 0;font-size: 15px;}
+.category-food-mobile-holder .holder-detail  .action .t{float:left;padding:16px 10px 0px 0px;}
+.category-food-mobile-holder .holder-detail  .action .wrapper-dropdown-2{float:left;}
+.category-food-mobile-holder .holder-detail  .action .wrapper-dropdown-2 .selected{background: #ffbc00;color: #fff;}
+.category-food-mobile-holder .holder-detail  .action .wrapper-dropdown-2 .dropdown{background:#ffbc00;height: 50px;}
+.category-food-mobile-holder .holder-detail  .action select{display:none;}
+.category-food-mobile-holder .holder-detail  .action a{float:right;color: #ffbc00;padding: 16px 10px 10px 10px;}
+.category-food-mobile-holder .holder-detail .filter{color: #ffbc00;font-size: 14px;}
+.category-food-mobile-holder .holder-detail .filter ul{padding: 10px 0;color:#838383;}
+.category-food-mobile-holder .holder-detail .filter li{float: left;width: 100%;padding: 10px 0px;cursor: pointer;}
+.category-food-mobile-holder .holder-detail .filter li .f-input{float: left;margin-right: 10px;position:relative;}
+.category-food-mobile-holder .holder-detail .filter li .f-input.active label:after{opacity:1;}
+.category-food-mobile-holder .holder-detail .filter li .f-input label:after {opacity: 0.2;content: '';position: absolute;width: 9px;height: 5px;background: transparent;top: 5px;left: 5px;border: 3px solid #333;border-top: none;border-right: none;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
+.category-food-mobile-holder .holder-detail .filter li .f-input label {cursor: pointer;position: absolute;width: 20px;height: 20px;top: 0;left: 0;background: #eee;border: 1px solid #ddd;}
+.category-food-mobile-holder .holder-detail .filter li .f-value{float: left;padding-left: 10px;}
+.category-food-mobile-holder .holder-detail .filter li .f-num{float:right;}
+.category-food-mobile-holder .holder-detail .filter .collapse{display:none;}
+.category-food-mobile-holder .holder-detail .filter .expand{padding:10px 0 10px 30px;position: relative;clear:both;color:#838383;cursor:pointer;}
+.category-food-mobile-holder .holder-detail .filter .expand:hover{color:#ffbc00;}
+.category-food-mobile-holder .holder-detail .filter .expand:after{content: " ";height: 24px;width: 30px;position: absolute;top: 5px;left: 87px;background: url(design/img/cate-food-list-icon) 0 -90px;}
+
+.section-list{margin-bottom:20px;}
+.section-list .wrapper{}
+.section-list .wrapper .list{width: 70%;float: left;}
+.section-list .wrapper .list .bs-item{background: #fff;margin-top: 20px;border-radius: 15px;}
+.section-list .wrapper .list .bs-item .item-detail-img-feature{float: left;width: 40%;line-height: 10px;}
+.section-list .wrapper .list .bs-item .item-detail-img-feature img{width: 100%;}
+.section-list .wrapper .list .bs-item .item-detail-header{width:58%;padding-left:2%;border-top: 5px solid #e97200;position:relative;border-radius: 0px 12px 0px 0px;}
+.section-list .wrapper .list .bs-item .item-detail-header .img-thumb{width:15%;}
+.section-list .wrapper .list .bs-item .item-detail-header .img-thumb:before{content: " ";height: 0;width: 0;position: absolute;top: 0px;right: 48%;border-color: #e97200 transparent transparent transparent;border-width: 10px;border-style: solid;}
+.section-list .wrapper .list .bs-item .item-detail-header .detail{width:83%;margin-left:2%;}
+.section-list .wrapper .list .bs-item .item-detail-header .detail h3{font-size:18px; margin:0 0 5px 0; color:#e97200;}
+.section-list .wrapper .list .bs-item .item-detail-header .detail h4{font-size:16px; color:#e97200;}
+.section-list .wrapper .list .bs-item .item-detail-header .detail .desc{color:#989898;line-height:18px;}
+.section-list .wrapper .list .bs-item .item-detail-header .detail li{color:#e97200;}
+.section-list .wrapper .list-banner{width: 26%;background: #fff;height: 300px;float: left;margin-left: 4%;margin-top: 20px;border-radius: 15px;}
+.section-list .wrapper .list .bs-item .phone-email {display:none;}
+		
 /*Footer*/
 #colophon{}
 #site-generator{background: #000;border-radius: 15px 15px 0px 0px;}
@@ -1745,6 +1860,31 @@ a.button.add-item                           { float: none; display: inline-block
 	.section-contact-mobile .wrapper li .contact {background-position: 0px -85px;}
 	.section-contact-mobile .wrapper li .feedback {background-position: 0px -111px;}
 	
+	/* category items page*/
+	.section-category-form .wrapper .category-form-holder{display:none;}
+	.category-food-mobile-holder{display:block;}
+	.section-list .list-banner{display:none;}
+	.section-list .wrapper .list .bs-item{border-radius:10px;}
+	.section-list .wrapper .list{float:none;width:auto;padding:0 10px;}
+	.section-list .wrapper .list .bs-item .item-detail-img-feature{display:none;}
+	.section-list .wrapper .list .bs-item .item-detail-header{width:100%;padding-left:0;border:0;padding-top:10px;}
+	.section-list .thumb-and-name{border-bottom:5px solid #e97200;float:left;position:relative;width:100%;margin-bottom:15px;}
+	.section-list .thumb-and-name:after{content: " ";height: 0;width: 0;position: absolute;bottom: -24px;right: 10%;border-color: #e97200 transparent transparent transparent;border-width: 10px;border-style: solid;}
+	.section-list .wrapper .list .bs-item .item-detail-header .img-thumb:before{display:none;}
+	.section-list .wrapper .list .bs-item .item-detail-header .img-thumb{width:20%}
+	.section-list .wrapper .list .bs-item .item-detail-header .detail{width: 78%;text-align: left;}
+	.section-list .wrapper .list .bs-item .item-detail-header .detail h3{font-size:15px;}
+	.section-list .wrapper .list .bs-item .item-detail-header .detail h4{font-size:13px;}
+	.section-list .wrapper .list .bs-item .desc-and-contact .desc{display:none;}
+	.section-list .bs-item li{background:url('design/img/cate-food-list-icon.png') no-repeat transparent;padding-left: 30px;line-height: 25px;font-size: 13px;overflow: hidden;text-align:left;}
+	.section-list .bs-item .item-detail-addr{background-position: 0px -35px;}
+	.section-list .bs-item .item-detail-tel{background-position: 0px -55px;}
+	.section-list .wrapper .list .bs-item .phone-email {display:block;border-top:1px solid #eee;margin-top:5px;}
+	.section-list .wrapper .list .bs-item .phone-email li{float:left;background: 0;width: 49%;padding-left: 0;text-align: center;border-right:1px solid #eee;}
+	.section-list .wrapper .list .bs-item .phone-email li:last-child{border-right:0;}
+	.section-list .wrapper .list .bs-item .phone-email li a{font-size:15px;}
+
+
 	/* Footer */
 	.section-subscription{display:none;}
 	#site-generator{padding:15px 0;border-radius:0;}

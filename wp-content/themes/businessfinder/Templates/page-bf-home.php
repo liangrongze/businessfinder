@@ -14,7 +14,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-1.png">
-							<span>专业人士</span>
+							<span><a href="?page_id=8558">专业人士</a></span>
 						</div>
 						<div class="sub-cate-list sub-cate-person">
 							<table>
@@ -45,7 +45,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-4.png">
-							<span>投资理财</span>
+							<span><a href="?page_id=8558">投资理财</a></span>
 						</div>
 						<div class="sub-cate-list sub-cate-finance">
 							<table>
@@ -76,7 +76,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-2.png">
-							<span>休闲娱乐</span>
+							<span><a href="?page_id=8558">休闲娱乐</a></span>
 						</div>
 						<div class="sub-cate-list sub-cate-entertaiment">
 							<table>
@@ -107,7 +107,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-5.png">
-							<span>日常修理</span>
+							<span><a href="?page_id=8558">日常修理</a></span>
 						</div>
 						<div class="sub-cate-list sub-cate-fix">
 							<table>
@@ -138,7 +138,7 @@
 					<div class="sub-item-holder">
 						<div class="ad">
 							<img src="wp-content/themes/businessfinder/design/img/category-3.png">
-							<span>生活饮食</span>
+							<span><a href="?page_id=8558">生活饮食</a></span>
 						</div>
 						<div class="sub-cate-list sub-cate-food">
 							<table>
