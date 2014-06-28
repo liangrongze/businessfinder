@@ -99,6 +99,7 @@ function aitEnqueueScriptsAndStyles()
 		'ait-jquery-nicescroll'       => array('file' => "$j/libs/jquery.nicescroll.min.js", 'deps' => array('jquery')),
 		'ait-jquery-quicksand'        => array('file' => "$j/libs/jquery.quicksand.js", 'deps' => array('jquery')),
 		'ait-jquery-hover-zoom'       => array('file' => "$j/libs/hover.zoom.js", 'deps' => array('jquery')),
+		'ait-jquery-carousel-typing'  => array('file' => "$j/libs/jquery.carouFredSel-6.1.0-packed.js", 'deps' => array('jquery')),
 		'ait-jquery-finished-typing'  => array('file' => "$j/libs/jquery.finishedTyping.js", 'deps' => array('jquery')),
 		'ait-jquery-jcarousel'        => array('file' => "$j/libs/jquery.jcarousel.min.js", 'deps' => array('jquery')),
 		'ait-jquery-flexslider'       => array('file' => "$j/libs/jquery.flexslider.js", 'deps' => array('jquery')),

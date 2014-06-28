@@ -1539,6 +1539,7 @@ a.button.add-item                           { float: none; display: inline-block
 }
 
 /* Header */
+.blackopacity{position: fixed;width: 100%;height: 1300px;top: 0;left: 0;bottom: 0;right: 0;background: #000;opacity: 0.5;display: block;z-index: -1;}
 #bf_branding{background-color: #000;}
 #bf_branding .menu-container{margin-top:25px;}
 #bf_branding .menu-container ul li{display:inline;}
@@ -1775,6 +1776,84 @@ a.button.add-item                           { float: none; display: inline-block
 .section-list .wrapper .list-banner{width: 26%;background: #fff;height: 300px;float: left;margin-left: 4%;margin-top: 20px;border-radius: 15px;}
 .section-list .wrapper .list .bs-item .phone-email {display:none;}
 		
+/*Single page*/
+.section-breadcrumb-holder{margin:10px 0;}
+.breadcrumb{width: 100%;position: relative;margin: 0 0 0 20px;}
+.breadcrumb ul {margin: 0;padding: 0;list-style: none;}
+.breadcrumb ul li a{color:#cfcfcc;}
+.breadcrumb ul li .divider {color: #fff;margin-right: 2px;}
+.breadcrumb ul li.active{color:#fff;}
+
+.section-banner{line-height:10px;}
+.section-banner img{width:100%;border-radius:15px 15px 0 0;}	
+
+.business-detail-part-1{}
+.business-detail-part-1 .wrapper{background: #212121;position:relative;padding-top: 20px;padding-bottom: 20px;border-radius: 0 0 15px 15px;}
+.business-detail-part-1 h1{color:#e77200;margin-left: 20px;font-family: pns-bold;font-size: 30px;}
+.business-detail-part-1 .addthis-toolbox{position:absolute;top:20px;right:10px;width:90%;}
+.business-detail-part-1 .addthis-toolbox a{float:right;}
+
+.business-detail-part-2 {margin-top: 20px;}
+.business-detail-part-2 .wrapper{background: #212121;border-radius: 15px;}
+.business-detail-part-2 .wrapper .map{width: 80%;height: 240px;float: left;}
+#map-canvas {height: 240px; width: 68%; margin: 0;border-radius: 15px 0 0 0;}
+.business-detail-part-2 .details{ width: 32%;height: 200px;}
+.business-detail-part-2 .details dd{ padding: 0 20px;}
+.business-detail-part-2 .details .address{ font-family: pns-regular;color: #8c8c8c;margin: 20px 0;font-size: 12px;line-height: 16px;}
+.business-detail-part-2 .details .website{ font: 13px/13px pns-regular;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.business-detail-part-2 .details .social-media{}
+.business-detail-part-2 .right{width: 20%;height: 200px;}
+.business-detail-part-2 a{text-decoration: underline;color:#fff;font-size:12px;}
+.business-detail-part-2 .details dd {margin-left: 0;margin-bottom: 10px;}
+.business-detail-part-2 dl.details dd.social-media a {position: relative;padding-left: 25px;height: 20px;line-height: 20px;}
+.business-detail-part-2 dl.details dd.social-media a:before {content: "";background: url(design/img/share-icons-small.png) no-repeat;height: 20px;width: 22px;display: inline-block;position: absolute;left: 0;}
+.business-detail-part-2 dl.details dd.social-media a[href*="twitter.com"]:before {background-position: 0 -20px;}
+.business-detail-part-2 dl.details dd.social-media a[href*="instagram.com"]:before {background: url(design/img/instagram_social.png) no-repeat;}
+.business-detail-part-2 .addthis_toolbox {width: 100%;}
+.business-detail-part-2 aside .addthis_toolbox a{background: #e57200;width: 100%;height: 78px;padding: 0;text-align: center;font: 14px/78px pns-bold;text-transform: uppercase;text-decoration: none;border-radius: 0 10px 0 0;font-size:22px;}
+.business-detail-part-2 aside .addthis_toolbox a:after {content: url(design/img/readMoreArrowLarge.png);position: relative;top: 5px;left: 10px;}
+.business-detail-part-2 aside.right .tel {background: #e57200;width: 100%;height: 78px;padding: 0;text-align: center;font: 14px/78px pns-bold;text-transform: uppercase;text-decoration: none;border-top: 2px solid #000;clear: both;font-size: 22px;color: #fff;}
+.business-detail-part-2 aside.right .button_download{border-radius:0px;border-top:2px solid #000;cursor:pointer;}
+.business-detail-part-2 .at15t_email{display:none;}
+.business-detail-part-2 .m-address{display:none;color: #e77200;padding: 10px 20px;text-align: center;font-size: 15px;font-weight: bold;}
+.business-detail-part-2 .m-tel{display:none;color: #e77200;padding: 20px 20px 0px 10px;clear: both;text-align: center;font-size: 20px;font-weight: bold;}
+.business-detail-part-2 .desc{width:100%;border-radius: 0 0 10px 10px;margin-bottom: 40px;color: #8C8C72;}
+.business-detail-part-2 .desc article{width:80%;margin-top: 20px;}
+.business-detail-part-2 .desc article p{margin:0px 20px;}
+.business-detail-part-2 .desc aside{width:20%;margin-top: 20px;}
+
+.section-related {margin-bottom: 20px;margin-top: 20px;}
+.section-related  h3{margin: 0 0 22px 20px;color: #fff;}
+.section-related .offers {width: 100%;margin-bottom: 20px;margin: auto;}
+
+.section-related .offers > .offer {width: 32.33%;height: 230px;margin-left: 1.5%;position: relative;text-decoration: none;}
+.section-related .offers > .offer:first-child {margin-left: 0;}
+.section-related .offers > .offer:before {content: "";background: url(design/img/offer.png);opacity: 0.6;width: 100%;height: 100%;display: block;z-index: 2;border-radius: 10px;overflow: hidden;position: absolute;}
+.section-related .offers > .offer > div {position: absolute;z-index: 2;height: 60px;transition: all 0.2s ease;-webkit-transition: all 0.2s ease;background: #1486ba;top: 0;left: 0;width: 100%;border-radius: 10px 10px 0 0;}
+.section-related .offers > .offer h4 {padding: 18px 39px 18px 20px;z-index: 2;text-transform: uppercase;font-size:15px;color:#fff;}
+.section-related .offers > .offer > div > span {padding: 0 20px 0 20px;display: none;height: 34px;line-height: 14px;color:#fff;}
+.section-related .offers > .offer > .image {position: absolute;bottom: 0;left: 0;z-index: 1;width: 100%;height: 100%;border-radius: 10px;overflow: hidden;}
+.section-related .offers > .offer > .image > img {position: absolute;bottom: 0;left: 0;border-radius: 10px;overflow: hidden;width:100%;}
+.section-related .offers > .offer:hover, .section-related .offers  > .offer:hover > div {background: #0273a8;border-radius: 10px;}
+.section-related .offers > .offer:hover > div >span {	display:block;}
+.section-related .offers > .offer:hover > div {height: 100%;}
+
+.section-gallery{	margin-bottom: 20px;}
+.section-gallery h3{color: #fff;padding-left:20px;}
+.section-gallery .carousel-holder {width: 760px !important;height: 110px;padding: 0 120px;position: relative;}
+.section-gallery .carousel-holder a {display: block;float: left;position: relative;}
+.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next {position: absolute;width: 110px;height: 110px;border-radius: 55px;background: #5a2484;top: 0;right: 0;text-decoration: none;}
+.section-gallery .carousel-holder .prev {transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);-ms-transform: rotate(180deg);left: 0;}
+.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next, .section-gallery .carousel-holder a .play > img {background: #e57200;}
+.section-gallery .carousel-holder .next:before, .section-gallery .carousel-holder .prev:before {content: url(design/img/right-arrow.png);position: relative;left: 5px;}
+.section-gallery .carousel-holder .caroufredsel_wrapper {width: 760px !important;}
+.section-gallery .carousel-holder .carousel a {width: 112px;height: 110px;border-radius: 10px;overflow: hidden;margin-right: 17px;}
+.section-gallery .carousel-holder img {padding: 0;display: block;float: left;border-radius: 10px;width: 112px;height: 110px;}
+.section-gallery .carousel-holder a .play {opacity: 0;width: 106px;height: 104px;border-radius: 10px;position: absolute;top: 0;left: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;border-color: #c25615;}
+.section-gallery .carousel-holder a .play > img {width: 38px;height: 38px;background: #5a2484;border-radius: 19px;position: absolute;top: 50%;left: 50%;margin-top: -19px;margin-left: -19px;background: #e57200;}
+.section-gallery .carousel-holder .carousel a:after {content: " ";position: absolute;background: url(design/img/eatdrink.png);width: 112px;height: 110px;top: 0;left: 0;border-radius: 10px;overflow: hidden;opacity: 0.4;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+.section-gallery .m-slider{position:relative;display:none;}
+.section-gallery .flex-direction-nav a{opacity:1;}
 /*Footer*/
 #colophon{}
 #site-generator{background: #000;border-radius: 15px 15px 0px 0px;}
@@ -1795,7 +1874,9 @@ a.button.add-item                           { float: none; display: inline-block
 #site-generator .foot-logo{float: right;margin: 5px 20px 5px 20px}
 #site-generator .foot-text{text-align: left;margin: 0px 20px;}
 
-.section-newest, .section-contact-mobile{display:none;}
+.section-newest, .section-contact-mobile{display:none;} 
+
+
 @media all and (max-width: 800px) { 
 
 	/*Header*/
@@ -1884,6 +1965,26 @@ a.button.add-item                           { float: none; display: inline-block
 	.section-list .wrapper .list .bs-item .phone-email li:last-child{border-right:0;}
 	.section-list .wrapper .list .bs-item .phone-email li a{font-size:15px;}
 
+	/* Singe product*/
+	.section-breadcrumb-holder,
+	.business-detail-part-1 .addthis-toolbox,
+	.business-detail-part-2 .details,
+	.business-detail-part-2 .right,
+	.business-detail-part-2 .desc aside{display:none;}
+	.business-detail-part-2 .wrapper .map,
+	#map-canvas,
+	.business-detail-part-2 .desc article{width:100%;}
+	.business-detail-part-2 .m-address{display:block;}
+	.business-detail-part-2 .m-tel{display:block;}
+	.business-detail-part-2 .desc article{color:#fff;margin-top:5px;background:#e77200;margin-top: 10px;border-radius: 0 0 10px 10px;}
+	.business-detail-part-2 .desc article p{margin:10px 20px;}
+
+	.section-related .wrapper h3{display:none;}
+	.section-related .offers > .offer{width:100%;margin-left:0;margin-bottom:20px;}
+	
+	.section-gallery .m-slider{display:block;}
+	.section-gallery .wrapper h3{display:none;}
+	.section-gallery .carousel-holder{display:none;}
 
 	/* Footer */
 	.section-subscription{display:none;}

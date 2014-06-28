@@ -200,10 +200,10 @@
 					<div class="item-detail-header left clearfix">
 						<div class="thumb-and-name">
 							<div class="img-thumb left">
-								<a href=""><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
 							</div>
 							<div class="detail left">
-								<a href="">
+								<a href="?page_id=8561">
 								<h3>飓风酒吧餐厅</h3>
 								<h4>Huricans' Grill & Bar Bondi Beach</h4>
 								</a>
@@ -221,8 +221,8 @@
 							</ul>
 							<div class="phone-email clearfix">
 								<ul>
-									<li><a href="">发邮件</a></li>
-									<li><a href="">发信息</a></li>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
 								</ul>
 							</div>
 						</div>
@@ -237,10 +237,10 @@
 					<div class="item-detail-header left clearfix">
 						<div class="thumb-and-name">
 							<div class="img-thumb left">
-								<a href=""><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
 							</div>
 							<div class="detail left">
-								<a href="">
+								<a href="?page_id=8561">
 								<h3>飓风酒吧餐厅</h3>
 								<h4>Huricans' Grill & Bar Bondi Beach</h4>
 								</a>
@@ -258,15 +258,14 @@
 							</ul>
 							<div class="phone-email clearfix">
 								<ul>
-									<li><a href="">发邮件</a></li>
-									<li><a href="">发信息</a></li>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
 								</ul>
 							</div>
 						</div>
 						
 					</div>
 			</div>
-			
 			<div class="bs-item clearfix">
 					<div class="item-detail-img-feature left">
 						<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
@@ -274,10 +273,10 @@
 					<div class="item-detail-header left clearfix">
 						<div class="thumb-and-name">
 							<div class="img-thumb left">
-								<a href=""><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
 							</div>
 							<div class="detail left">
-								<a href="">
+								<a href="?page_id=8561">
 								<h3>飓风酒吧餐厅</h3>
 								<h4>Huricans' Grill & Bar Bondi Beach</h4>
 								</a>
@@ -295,15 +294,14 @@
 							</ul>
 							<div class="phone-email clearfix">
 								<ul>
-									<li><a href="">发邮件</a></li>
-									<li><a href="">发信息</a></li>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
 								</ul>
 							</div>
 						</div>
 						
 					</div>
 			</div>
-			
 			<div class="bs-item clearfix">
 					<div class="item-detail-img-feature left">
 						<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
@@ -311,10 +309,10 @@
 					<div class="item-detail-header left clearfix">
 						<div class="thumb-and-name">
 							<div class="img-thumb left">
-								<a href=""><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
 							</div>
 							<div class="detail left">
-								<a href="">
+								<a href="?page_id=8561">
 								<h3>飓风酒吧餐厅</h3>
 								<h4>Huricans' Grill & Bar Bondi Beach</h4>
 								</a>
@@ -332,15 +330,14 @@
 							</ul>
 							<div class="phone-email clearfix">
 								<ul>
-									<li><a href="">发邮件</a></li>
-									<li><a href="">发信息</a></li>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
 								</ul>
 							</div>
 						</div>
 						
 					</div>
 			</div>
-			
 			<div class="bs-item clearfix">
 					<div class="item-detail-img-feature left">
 						<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
@@ -348,10 +345,10 @@
 					<div class="item-detail-header left clearfix">
 						<div class="thumb-and-name">
 							<div class="img-thumb left">
-								<a href=""><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
 							</div>
 							<div class="detail left">
-								<a href="">
+								<a href="?page_id=8561">
 								<h3>飓风酒吧餐厅</h3>
 								<h4>Huricans' Grill & Bar Bondi Beach</h4>
 								</a>
@@ -369,8 +366,44 @@
 							</ul>
 							<div class="phone-email clearfix">
 								<ul>
-									<li><a href="">发邮件</a></li>
-									<li><a href="">发信息</a></li>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+			</div>
+			<div class="bs-item clearfix">
+					<div class="item-detail-img-feature left">
+						<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
+					</div>
+					<div class="item-detail-header left clearfix">
+						<div class="thumb-and-name">
+							<div class="img-thumb left">
+								<a href="?page_id=8561"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+							</div>
+							<div class="detail left">
+								<a href="?page_id=8561">
+								<h3>飓风酒吧餐厅</h3>
+								<h4>Huricans' Grill & Bar Bondi Beach</h4>
+								</a>
+							</div>
+						</div>
+						<div class="desc-and-contact clearfix">
+							<div class="desc">
+								拥有全资格的牛排餐厅和酒吧。提供优质牛肉牛排、
+								排骨、鸡肉和海鲜。让你在闲暇之余享受美味充实的
+								感觉。本店招牌餐点为烤猪肋骨和香葱面包。
+							</div>
+							<ul class="clearfix">
+								<li class="item-detail-addr">130 Rosoe Street, Bondi Beach, NSW 2026</li>
+								<li class="item-detail-tel">(02) 9876 0987</li>
+							</ul>
+							<div class="phone-email clearfix">
+								<ul>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
 								</ul>
 							</div>
 						</div>

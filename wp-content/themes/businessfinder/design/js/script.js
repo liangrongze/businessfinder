@@ -200,6 +200,72 @@ function HomeDisplayCategory(){
 	$j('.ads').flexslider({animation: "slide"});
 }
 
+function loadScript(callback) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+        'callback='+callback;
+    document.body.appendChild(script);
+}
+
+var initEventPage = function () {
+
+    setTimeout("loadScript('setupEventMap')", 1500);
+	var browserWidth = $j( window ).width();
+	if ( browserWidth > 800 ){
+		$j(".carousel").carouFredSel({
+		        auto: false,
+		        circular: false,
+		        infinite:false,
+		        items: 6,
+		        scroll: 1,
+		        prev: { button: "a.prev" },
+		        next: { button: "a.next" },
+		        onCreate: function (data) {
+		            if (data.items.length < 6) {
+		                $j(".carousel-holder").css('padding-left','0');
+		            }
+		        }
+		    });
+	}else{
+		$j('.m-slider').flexslider({
+			animation: "fade",
+			direction: "horizontal",
+			startAt: 0,         
+			slideshowSpeed: 6500,         
+			animationSpeed: 600, 
+			useCSS: false,
+		});
+	}
+}
+
+var setupEventMap = function () {
+    var myLocation = $j(".map").data("location").split(",");
+    var myLatlng = new google.maps.LatLng(parseFloat(myLocation[0]), parseFloat(myLocation[1]));
+    var myZoom = parseInt(myLocation[2]);
+
+    var mapOptions = {
+        center: myLatlng,
+        zoom: myZoom,
+        disableDefaultUI: true,
+        scrollwheel: true,
+        navigationControl: true,
+        draggable: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: true,
+        zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL }
+    }
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map
+    });
+
+    google.maps.event.addListener(map, 'tilesloaded', function () {
+        $j('#map-canvas').find('img').attr('nopin', 'nopin');
+    });
+}
+
 function ItemDetailGallery() {
 
 	$j("ul.item-gallery-thumbnails li.image").click(function(event) {
