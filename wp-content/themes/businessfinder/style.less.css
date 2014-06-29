@@ -1629,6 +1629,11 @@ a.button.add-item                           { float: none; display: inline-block
 .sub-category-holder .sub-item-holder .sub-cate-fix>table>tbody>tr>td>div a{color:#ff2116;}
 .sub-category-holder .sub-item-holder .sub-cate-food>table>tbody>tr>td>div a{color:#ffc000;}
 .sub-category-holder .flex-direction-nav {display:none;}
+.sub-category-holder .slides img{width:auto;display:inline;}
+.sub-category-holder .slides li{width:100%}
+.section-ad-contact .flexslider, .sub-category-holder.flexslider {
+margin: 0 0 20px;
+border: 0;} 
 
 .section-ad-contact {margin-top:20px;}
 .section-ad-contact .contact-form h3,.section-ad-contact .ad h3 {color:#fff;font-size:17px;}
