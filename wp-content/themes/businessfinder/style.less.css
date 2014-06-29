@@ -1887,7 +1887,7 @@ border: 0;}
 	/*Header*/
 	#bf_branding{padding-top:35px;}
 	#bf_branding #logo{padding: 10px 10px 5px 10px;}
-	#bf_branding .menu-container{position: fixed;top: 0;left: 0;width: 100%;margin-top: 0;background:#6D6767;}
+	#bf_branding .menu-container{position: fixed;top: 0;left: 0;width: 100%;margin-top: 0;background:#6D6767;z-index: 1000;}
 	#bf_branding .menu-container ul li a{padding:0 5px;color:#eee;font-size:13px;}
 	#bf_branding .menu-container ul li a:hover{background:#6D6767;}
 	#directory-search.regular-search{text-align:left;}
@@ -1918,6 +1918,10 @@ border: 0;}
 	.sub-category-holder .flex-direction-nav .flex-prev{top:35px;left:30%;}
 	.sub-category-holder .flex-direction-nav .flex-next{top:35px;right:30%;}
 	.sub-category-holder .flex-control-nav{display:none;}
+	.sub-category-holder .sub-item-holder .sub-cate-list>table>tbody>tr>td{border:0;}
+	.sub-category-holder .flex-direction-nav a{background: url(design/img/bg_direction_nav.png) no-repeat 0 0;}
+	.sub-category-holder .flex-direction-nav a.flex-next{background-position:-24px 0;}
+	.sub-category-holder .flex-direction-nav a.flex-prev{background-position:6px 0;}
 	
 	.section-newest{margin: 20px 10px 10px 10px;display:block;}
 	.section-newest a,.section-newest h3,.section-newest h4,.section-newest span{color:#00a4ff}
