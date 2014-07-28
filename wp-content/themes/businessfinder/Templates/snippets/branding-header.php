@@ -90,6 +90,7 @@
 			<div class="color-2"></div>
 			<div class="color-3"></div>
 			<div class="color-4"></div>
+			<div class="color-5"></div>
 			<div class="color-6"></div>
 			<div class="color-7"></div>
 			<div class="color-8"></div>
@@ -97,10 +98,6 @@
 			<div class="color-10"></div>
 			<div class="color-11"></div>
 			<div class="color-12"></div>
-			<div class="color-13"></div>
-			<div class="color-14"></div>
-			<div class="color-15"></div>
-			<div class="color-16"></div>
 		</div>
 	</div>
 </header>

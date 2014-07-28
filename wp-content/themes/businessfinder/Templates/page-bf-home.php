@@ -19,22 +19,22 @@
 						<div class="sub-cate-list sub-cate-person">
 							<table>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-1" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-2" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-3" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-4" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-5" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-6" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-7" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-8" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-9" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-10" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-11" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-1-12" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 						
 							</table>
@@ -50,22 +50,22 @@
 						<div class="sub-cate-list sub-cate-finance">
 							<table>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-1" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-2" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-3" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-4" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-5" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-6" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-7" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-8" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href="?page_id=8558"><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-9" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-10" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-11" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-2-12" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 						
 							</table>
@@ -80,24 +80,24 @@
 						</div>
 						<div class="sub-cate-list sub-cate-entertaiment">
 							<table>
-								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-								</tr>
-								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-								</tr>
-								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-								</tr>
+							<tr>
+								<td><div><a class="cate cate-3-1" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-2" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-3" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-4" href="?page_id=8558"><span>留学移民</span></a></div></td>
+							</tr>
+							<tr>
+								<td><div><a class="cate cate-3-5" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-6" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-7" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-8" href="?page_id=8558"><span>留学移民</span></a></div></td>
+							</tr>
+							<tr>
+								<td><div><a class="cate cate-3-9" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-10" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-11" href="?page_id=8558"><span>留学移民</span></a></div></td>
+								<td><div><a class="cate cate-3-12" href="?page_id=8558"><span>留学移民</span></a></div></td>
+							</tr>
 						
 							</table>
 						</div>
@@ -112,24 +112,23 @@
 						<div class="sub-cate-list sub-cate-fix">
 							<table>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-1" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-2" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-3" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-4" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-5" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-6" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-7" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-8" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-9" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-10" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-11" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-4-12" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
-						
 							</table>
 						</div>
 					</div>
@@ -143,24 +142,23 @@
 						<div class="sub-cate-list sub-cate-food">
 							<table>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-1" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-2" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-3" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-4" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-5" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-6" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-7" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-8" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
 								<tr>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
-									<td><div><a href=""><img src="wp-content/themes/businessfinder/design/img/sub-category-1.png"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-9" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-10" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-11" href="?page_id=8558"><span>留学移民</span></a></div></td>
+									<td><div><a class="cate cate-5-12" href="?page_id=8558"><span>留学移民</span></a></div></td>
 								</tr>
-						
 							</table>
 						</div>
 					</div>
@@ -191,7 +189,7 @@
 					<label for="your-message" style="opacity: 1;">Message</label><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="4" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" id="your-message"></textarea></span>
 					</p>
 					<p class="subimt-p">
-					<input type="submit" value="Send Message" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader" src="http://local.com/eddie/businessfinder/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;"></p>
+					<input type="submit" value="发送" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader" src="http://local.com/eddie/businessfinder/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;"></p>
 					<div class="wpcf7-response-output wpcf7-display-none"></div></form>
 				</div>
 			</div>
@@ -202,9 +200,11 @@
 			<div class="flexslider clearfix ads">
 				<ul class="slides">
 					<li>
+						<div class="top"></div>
 						<img src="wp-content/themes/businessfinder/design/img/home-banner-1.png">
 					</li>
 					<li>
+						<div class="top"></div>
 						<img src="wp-content/themes/businessfinder/design/img/home-banner-1.png">
 					</li>
 				</ul>

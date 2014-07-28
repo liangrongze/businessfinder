@@ -66,15 +66,18 @@
 		">The Promenade, Cockle Bay Wharf, Darling Harbour, NSW, 2000</div>
 		<div class="map" data-location="-33.87200452108626,151.20230004232792,20">
 			<div id="map-canvas" class="left" style=""></div>
-			<dl class="details left">
-			            <dd class="address">The Promenade, Cockle Bay Wharf, Darling Harbour, NSW, 2000</dd>
-			            <dd class="website"><a href="http://www.nicks-seafood.com.au/bf" target="_blank">www.nicks-seafood.com.au/adria</a></dd>
-			            <dd class="social-media">
-							<p><a href="http://www.facebook.com/bf" target="_blank">/NicksRestaurantandBarGroup</a></p>
-							<p><a href="http://www.twitter.com/bf" target="_blank">@nicksgroup_</a></p>
-							<p><a href="http://www.instagram.com/bf" target="_blank">/nicksgroup#</a></p>
-						</dd>
-	        </dl>
+			<div class="details left">
+				<dl class="">
+				            <dd class="address">The Promenade, Cockle Bay Wharf, Darling Harbour, NSW, 2000</dd>
+							<dd class="address">(02) 9876 0987</dd>
+				            <dd class="website"><a href="http://www.nicks-seafood.com.au/bf" target="_blank">www.nicks-seafood.com.au/adria</a></dd>
+		        </dl>
+					<div class="sl">
+						<a href="">分享</a>
+						<a href="">商家名片</a>
+						<a href="">其他信息</a>
+					</div>
+			</div>
 		</div>
 		<div class="m-tel" style="
 		    color: #e77200;
@@ -84,54 +87,12 @@
 		    font-size: 20px;
 		    font-weight: bold;
 		">联系电话：9999 9999999</div>
-	    <aside class="right">
-	           <div class="addthis_toolbox addthis_default_style addthis_32x32_style left clearBoth">
-	               <a class="addthis_button_email">分享给小火伴</a>
-	           </div>
-	           <div class="tel clearfix">
-	              <span>TEL:9247 87090</span>
-	           </div>
-	           <div class="addthis_toolbox clearfix">
-	               <a class="button_download left">下载商家名片</a>
-	           </div>
-	    </aside>
+	   <div class="clear"></div>
 		<div class="desc">
 			<article class="left">
 			     <p>Adria Bar Restaurant captures the flavours of the Adriatic from Venice in the north, through to the island of Crete, south of Greece. Adria offers chargrilled meat and fish, whole roasted fish and fresh seafood, rotisserie cooked meats and sausages, pasta and risotto as well as flavoursome Adriatic specialties. Tasting plates are an excellent way to sample a variety of Adria's menu.</p>
 				 <p>Adria has a warm atmosphere for lunch with family and friends or meetings with colleagues while the fisherman's bar serves cocktails, drinks and alfresco dining from the bar menu.&nbsp; &nbsp; &nbsp; &nbsp;</p>
 			</article>
-			<aside class="right">
-			            <div class="Tags">
-			                <span>Tags: </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">alfresco</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">cocktails</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">grill</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">waterfront</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">birthdays</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">steak</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">seafood</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">restaurant</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">Best Restaurants</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">wine</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">mediterranean</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">functions</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">corporate functions</span></a>
-			                        <span>, </span>
-			                    <a href="/" class="Tag" style="color: rgb(255, 255, 255);"><span class="underline" style="color: rgb(255, 255, 255);">rotisserie</span></a>
-			            </div>
-			    </aside>
 		</div>
 	</div>
 </div>
@@ -140,32 +101,31 @@
 <!-- start .business-related -->
 <div class="section-related">
 	<div class="wrapper">
-        <h3>OFFERS</h3>
+        <h3>商家优惠信息</h3>
         <div class="offers left">
                 <a class="offer left" href="/">
                     <div>
-                        <h4>$16 Lunch Special at Adria</h4>
+                        <h4>$16 午餐特惠</h4>
                         <span>
-                            Join us at Adria Bar Restaurant to enjoy this exciting lunch special with stunning waterfront views! Select from salt and pepper calamari, wagyu beef burger, chicken caesar salad or lamb souvlaki for just $16. <span class="more">More info</span>
+                            $16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠<span class="more">更多信息</span>
                         </span>
                     </div>
                     <div class="image"><img src="wp-content/themes/businessfinder/design/img/offer-1.jpeg" alt="$16 Lunch Special at Adria"></div>
                 </a>
                 <a class="offer left" href="/">
                     <div>
-                        <h4>Adria Early Dinner Special </h4>
+                        <h4>$16 午餐特惠</h4>
                         <span>
-                            Adria's early dinner special boasts a two-course meal for just $25. Showcasing a selection of four mains (rotisserie beef, lamb/ pork, grilled catch of the day, free range chicken breast or lamb souvlaki). Plus a choice of white chocolate panna cotta or fresh banana and caramel creme brulee. This special is not to be missed. Come down after work and let our staff and chefs service your every need. <span class="more">More info</span>
+                            $16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠<span class="more">更多信息</span>
                         </span>
                     </div>
                     <div class="image"><img src="wp-content/themes/businessfinder/design/img/offer-2.jpeg" alt="Adria Dinner Special"></div>
                 </a>
                 <a class="offer left" href="/">
                     <div>
-                        <h4>Happy Hour</h4>
+                        <h4>$16 午餐特惠</h4>
                         <span>
-                            Knock off and join us at Adria Bar and Restaurant for happy hour. Relax and unwind on the water’s edge and enjoy $10 cocktails, $5 Coronas and a selection of $10 bar plates.
- <span class="more">More info</span>
+                            $16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠$16 午餐特惠<span class="more">更多信息</span>
                         </span>
                     </div>
                     <div class="image"><img src="wp-content/themes/businessfinder/design/img/offer-3.jpeg" alt="Happy Hour"></div>

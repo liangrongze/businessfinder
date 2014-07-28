@@ -189,7 +189,19 @@ function default_footer_menu(){
 }
 
 remove_action('wp_head', 'wp_generator'); // do not show generator meta element
-
+function load_cate_style(){
+	$style = "";
+	for($i=1;$i<6;$i++){
+		for($j=1;$j<13;$j++){
+			$_class = "cate-".$i."-".$j;
+			$style .= ".".$_class."{background: url('wp-content/themes/businessfinder/design/img/cates/".$_class.".png') 10px 10px;}";
+			$style .= ".".$_class.":hover{background: url('wp-content/themes/businessfinder/design/img/cates/".$_class."-hover.png') 10px 10px;}";
+		}
+	}
+	
+	echo '<style> '.$style.'</style>';
+}
+add_action('wp_head','load_cate_style');
 add_filter('widget_title', 'do_shortcode');
 add_filter('widget_text', 'do_shortcode'); // do shortcode in text widget
 
