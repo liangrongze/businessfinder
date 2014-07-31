@@ -219,7 +219,9 @@ add_action( 'ait-dir-item-category_edit_form_fields', 'edit_dir_item_category', 
 add_action( 'ait-dir-item-category_add_form_fields', 'add_dir_item_category', 10, 2);
 function edit_dir_item_category($tag, $taxonomy) {
 	$icon = get_option( 'ait_dir_item_category_'.$tag->term_id.'_icon', '' );
+	$icon_hover = get_option( 'ait_dir_item_category_'.$tag->term_id.'_hover', '' );
 	$marker = get_option( 'ait_dir_item_category_'.$tag->term_id.'_marker', '' );
+	$ads = get_option( 'ait_dir_item_category_'.$tag->term_id.'_ads', '' );
 	$excerpt = get_option( 'ait_dir_item_category_'.$tag->term_id.'_excerpt', '' );
 
 	?>
@@ -236,6 +238,24 @@ function edit_dir_item_category($tag, $taxonomy) {
 			<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_icon_selectMedia" name="ait_dir_item_category_icon_selectMedia" style="width: 15%;">
 			<br />
 			<p class="description">Icon for category</p>
+		</td>
+	</tr>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="ait_dir_item_category_hover">Icon Hover</label></th>
+		<td>
+			<input type="text" name="ait_dir_item_category_hover" id="ait_dir_item_category_hover" value="<?php echo $icon_hover; ?>" style="width: 80%;"/>
+			<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_hover_selectMedia" name="ait_dir_item_category_icon_hover_selectMedia" style="width: 15%;">
+			<br />
+			<p class="description">Icon Hover for category</p>
+		</td>
+	</tr>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="ait_dir_item_category_marker">Ads Picture</label></th>
+		<td>
+			<input type="text" name="ait_dir_item_category_ads" id="ait_dir_item_category_ads" value="<?php echo $ads; ?>" style="width: 80%;"/>
+			<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_ads_selectMedia" name="ait_dir_item_category_ads_selectMedia" style="width: 15%;">
+			<br />
+			<p class="description">Main category ads picture, display in home page.</p>
 		</td>
 	</tr>
 	<tr class="form-field">
@@ -263,6 +283,20 @@ function add_dir_item_category($tag) {
 			<p class="description">Icon for category</p>
 	</div>
 	<div class="form-field">
+		<label for="ait_dir_item_category_icon">Icon Hover</label>
+		<input type="text" name="ait_dir_item_category_hover" id="ait_dir_item_category_hover" value="" style="width: 80%;"/>
+		<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_hover_selectMedia" name="ait_dir_item_category_hover_selectMedia" style="width: 15%;">
+			<br />
+			<p class="description">Icon Hover for category</p>
+	</div>
+	<div class="form-field">
+		<label for="ait_dir_item_category_ads">Ads Picture</label>
+		<input type="text" name="ait_dir_item_category_ads" id="ait_dir_item_category_ads" value="" style="width: 80%;"/>
+		<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_ads_selectMedia" name="ait_dir_item_category_ads_selectMedia" style="width: 15%;">
+			<br />
+			<p class="description">Main category ads picture, display in home page.</p>
+	</div>
+	<div class="form-field">
 		<label for="ait_dir_item_category_marker">Map Marker</label>
 		<input type="text" name="ait_dir_item_category_marker" id="ait_dir_item_category_marker" value="" style="width: 80%;"/>
 		<input type="button" value="Select Image" class="media-select" id="ait_dir_item_category_marker_selectMedia" name="ait_dir_item_category_marker_selectMedia" style="width: 15%;">
@@ -284,6 +318,16 @@ function save_dir_item_category($term_id, $tt_id) {
 	if (isset($_POST['ait_dir_item_category_icon'])){
 		$name = 'ait_dir_item_category_' .$term_id. '_icon';
 		update_option( $name, $_POST['ait_dir_item_category_icon'] );
+	}
+	
+	if (isset($_POST['ait_dir_item_category_hover'])){
+		$name = 'ait_dir_item_category_' .$term_id. '_hover';
+		update_option( $name, $_POST['ait_dir_item_category_hover'] );
+	}
+	
+	if (isset($_POST['ait_dir_item_category_ads'])){
+		$name = 'ait_dir_item_category_' .$term_id. '_ads';
+		update_option( $name, $_POST['ait_dir_item_category_ads'] );
 	}
 
 	if (isset($_POST['ait_dir_item_category_marker'])){

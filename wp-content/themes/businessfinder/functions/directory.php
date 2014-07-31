@@ -337,8 +337,12 @@ function getCategoryMeta( $what, $categoryID ) {
 				}
 				if(strpos($r->option_name,'icon') !== false){
 					$aitCategoryMeta[$id]['icon'] = $r->option_value;
+				} else if(strpos($r->option_name,'hover') !== false){
+					$aitCategoryMeta[$id]['hover'] = $r->option_value;
 				} else if(strpos($r->option_name,'marker') !== false){
 					$aitCategoryMeta[$id]['marker'] = $r->option_value;
+				} else if(strpos($r->option_name,'ads') !== false){
+					$aitCategoryMeta[$id]['ads'] = $r->option_value;
 				} else {
 					$aitCategoryMeta[$id]['excerpt'] = $r->option_value;
 				}
@@ -362,6 +366,36 @@ function getCategoryMeta( $what, $categoryID ) {
 				}
 			}
 			return $icon;
+		case 'hover':
+				$anc = get_ancestors( $categoryID, 'ait-dir-item-category' );
+				$icon = isset($aitCategoryMeta[$categoryID]) ? $aitCategoryMeta[$categoryID]['hover'] : '';
+				if(empty($icon)){
+					foreach ($anc as $value) {
+						if(!empty($aitCategoryMeta[$value]['hover'])){
+							$icon = $aitCategoryMeta[$value]['hover'];
+							break;
+						}
+					}
+					if(empty($icon)){
+						$icon = $GLOBALS['aitThemeOptions']->directory->defaultCategoryIcon;
+					}
+				}
+				return $icon;
+		case 'ads':
+				$anc = get_ancestors( $categoryID, 'ait-dir-item-category' );
+				$icon = isset($aitCategoryMeta[$categoryID]) ? $aitCategoryMeta[$categoryID]['ads'] : '';
+				if(empty($icon)){
+					foreach ($anc as $value) {
+						if(!empty($aitCategoryMeta[$value]['ads'])){
+							$icon = $aitCategoryMeta[$value]['ads'];
+							break;
+						}
+					}
+					if(empty($icon)){
+						$icon = $GLOBALS['aitThemeOptions']->directory->defaultCategoryIcon;
+					}
+				}
+				return $icon;
 		case 'marker':
 			$anc = get_ancestors( $categoryID, 'ait-dir-item-category' );
 			$marker = isset($aitCategoryMeta[$categoryID]) ? $aitCategoryMeta[$categoryID]['marker'] : '';
@@ -651,4 +685,51 @@ function aitAddHttp($url) {
         $url = "http://" . $url;
     }
     return $url;
+}
+
+function render_main_category_style($categories = array()){
+	if( !$categories){
+		
+		$categories = get_terms('ait-dir-item-category', array(
+			'hide_empty'		=> false,
+			'orderby'			=> 'name',
+			'parent !' => 0
+		));
+				
+	}
+	$style = "";
+	foreach($categories AS $category){
+		$icon = getRealThumbnailUrl(getCategoryMeta("icon", intval($category->term_id)));
+		$icon_hover = getRealThumbnailUrl(getCategoryMeta("hover", intval($category->term_id)));
+		$style .= ".main-category .cate-".$category->term_id."{background:url('".$icon."') 25px -6px no-repeat;}";
+		$style .= ".main-category .cate-".$category->term_id.":hover{background:url('".$icon_hover."') 25px -6px no-repeat;}";
+	}
+	
+	$style .="";
+	
+	return $style;
+}
+
+function render_sub_category_style($categories = array()){
+	if( !$categories){
+		
+		$categories = get_terms('ait-dir-item-category', array(
+			'hide_empty'		=> false,
+			'orderby'			=> 'name',
+		));
+				
+	}
+	$style = "";
+	foreach($categories AS $category){
+		if($category->parent != 0){
+			$icon = getRealThumbnailUrl(getCategoryMeta("icon", intval($category->term_id)));
+			$icon_hover = getRealThumbnailUrl(getCategoryMeta("hover", intval($category->term_id)));
+			$style .= ".sub-cate-list .cate-".$category->term_id."{background:url('".$icon."') 10px 10px no-repeat;}";
+			$style .= ".sub-cate-list .cate-".$category->term_id.":hover{background:url('".$icon_hover."') 10px 10px no-repeat;}";
+		}
+	}
+	
+	$style .="";
+	
+	return $style;
 }

@@ -1589,29 +1589,7 @@ a.button.add-item                           { float: none; display: inline-block
 .main-category-list{padding:50px 0 30px 0;}
 .main-category{height:120px;background-color: #fff;border-radius: 8px;}
 .main-category a{display:inline;float:left;width: 20%;text-align: center;}
-.main-category .cate-person {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 7px bottom -1353px}
-.main-category .cate-person:hover {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 7px bottom -1224px;}
-
-.main-category .cate-finance {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 6px bottom -821px}
-.main-category .cate-finance:hover {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 6px bottom -668px}
-
-.main-category .cate-entertaiment {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 7px bottom -1094px}
-.main-category .cate-entertaiment:hover {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 7px bottom -958px}
-
-.main-category .cate-fix {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 14px bottom -367px}
-.main-category .cate-fix:hover {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 6px bottom -515px}
-
-.main-category .cate-food {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 16px bottom -218px}
-.main-category .cate-food:hover {background: url('design/img/category-spirit.png') no-repeat transparent;background-position: right 12px bottom -65px}
-
-.main-category a>div{width: 100%;padding-top: 92px;padding-bottom: 10px;border-right:1px solid #eee;color:#2e2e2e;}
-.main-category .cate-food>div{border:0;}
-.main-category .cate-person>div:hover{color:#07368b;}
-.main-category .cate-finance>div:hover{color:#006714;}
-.main-category .cate-entertaiment>div:hover{color:#ff7f00;}
-.main-category .cate-fix>div:hover{color:#ff2116;}
-.main-category .cate-food>div:hover{color:#ffc000;}
-
+.main-category a>div{width: 100%;height: 120px;border-right:1px solid #eee;color:#fff;}
 
 /* Home page */
 .sub-category-holder{background:#fff;height:428px;border-radius: 10px;}
