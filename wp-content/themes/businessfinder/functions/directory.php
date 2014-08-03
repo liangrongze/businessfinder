@@ -491,11 +491,13 @@ function aitGetPostExcerpt($excerpt, $content) {
 	$newExcerpt = '';
 	$trimExcerpt = trim($excerpt);
 	if(empty($trimExcerpt)){
-		$exc = substr(strip_shortcodes($content), 0, 300);
+		$exc = substr(strip_shortcodes($content), 0, 100);
 		$pos = strrpos($exc, " ");
 		$newExcerpt = substr($exc, 0, ($pos ? $pos : -1)) . "...";
 	} else {
-		$newExcerpt = $excerpt;
+		$exc = substr(strip_shortcodes($excerpt), 0, 100);
+		$pos = strrpos($exc, " ");
+		$newExcerpt = substr($exc, 0, ($pos ? $pos : -1)) . "...";
 	}
 	return $newExcerpt;
 }

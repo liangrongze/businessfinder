@@ -4,6 +4,13 @@ featured:
 	default:
 		enable:
 			label: 'Yes'
+			
+logo:
+	label: Logo
+	type: image-url
+engName:
+	label: English Name
+	type: text
 address:
 	label: Address
 	type: textarea

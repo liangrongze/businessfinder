@@ -62,6 +62,7 @@ function createSearchDropdowns () {
 
 	if ( browserWidth < 800 ) {
 		$j('.holder-title').click(function(){
+			
 			$j('.holder-detail').toggle();
 			var popup = $j(this).parent();
 			if( $j(".holder-detail").is(':visible')){
@@ -163,6 +164,7 @@ DropDown.prototype = {
         var obj = this;
 
         obj.dd.on('click', function (event) {
+			event.preventDefault();
             var $selectedText = $j(event.target).closest('div').find('.selected'),
                 $item = null;
 
