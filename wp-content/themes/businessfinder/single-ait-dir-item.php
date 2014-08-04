@@ -7,14 +7,11 @@ $latteParams['post'] = WpLatte::createPostEntity(
 	)
 );
 
+
 $latteParams['options'] = get_post_meta($latteParams['post']->id, '_ait-dir-item', true);
+
 // check url link
 $latteParams['options']['web'] = (empty($latteParams['options']['web'])) ? '' : aitAddHttp($latteParams['options']['web']);
-
-// if item has 0,0 location = hide from map
-if (!isset($options['gpsLatitude'], $options['gpsLongitude']) || (empty($options['gpsLatitude']) && empty($options['gpsLongitude']))) {
-	$latteParams['itemDetailEmpty'] = true;
-}
 
 $thumbnailDir = wp_get_attachment_image_src( get_post_thumbnail_id($latteParams['post']->id), 'full' );
 if($thumbnailDir !== false){
@@ -22,6 +19,24 @@ if($thumbnailDir !== false){
 } else {
 	$latteParams['thumbnailDir'] = getRealThumbnailUrl($aitThemeOptions->directory->defaultItemImage);
 }
+
+// check gallery enable
+$latteParams['galleryEnable'] = !isset($latteParams['options']['galleryEnable']) ? false : true;
+
+if( $latteParams['galleryEnable'] ){
+
+	$latteParams['galleryEnable'] = false;
+
+	for ($i=1; $i<21; $i++){
+		$name='gallery'.$i ;
+		if ($options[$name] != ''){
+			$latteParams['galleryEnable'] = true;
+			break;
+		}
+	}
+
+}
+ 
 // get term for this items
 $terms = wp_get_post_terms($latteParams['post']->id, 'ait-dir-item-category');
 
@@ -112,7 +127,19 @@ $latteParams['isDirSingle'] = true;
 
 $latteParams['sidebarType'] = 'item';
 
-$latteParams['rating'] = get_post_meta( $latteParams['post']->id, 'rating', true );
+$categories = get_terms('ait-dir-item-category', array(
+	'hide_empty'		=> false,
+	'orderby'			=> 'name',
+	'parent' => 0
+));
+
+foreach($categories as $category){
+	$category->link = get_term_link(intval($category->term_id), 'ait-dir-item-category');
+}
+$latteParams['main_categoires_style'] = render_main_category_style($categories);
+$latteParams['open'] = 'style';
+$latteParams['close'] = 'style';
+$latteParams['categories'] = $categories;
 
 // claim listing
 $user = new WP_User(intval($GLOBALS['wp_query']->post->post_author));

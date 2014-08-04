@@ -64,10 +64,43 @@ specialContent:
 specialImage:
 	label: Image
 	type: image-url
-specialPrice:
-	label: Price
+
+"Special Offer 2" : section
+specialActive2:
+	label: Active
+	type: checkbox
+	default:
+		active:
+			label: "Yes"
+specialTitle2:
+	label: Title
 	type: text
 	default: ''
+specialContent2:
+	label: Content
+	type: textarea
+specialImage2:
+	label: Image
+	type: image-url
+
+"Special Offer 3" : section
+specialActive3:
+	label: Active
+	type: checkbox
+	default:
+		active:
+			label: "Yes"
+specialTitle3:
+	label: Title
+	type: text
+	default: ''
+specialContent3:
+	label: Content
+	type: textarea
+specialImage3:
+	label: Image
+	type: image-url
+	
 "Gallery" : section
 galleryEnable:
 	label: Show gallery

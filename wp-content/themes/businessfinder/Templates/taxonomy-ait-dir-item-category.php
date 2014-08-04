@@ -1,128 +1,265 @@
 {extends $layout}
 
 {block content}
-
-<header class="entry-header">
+<!-- Begin .section-category-holder -->
+<div class="section-category-holder">
 	<div class="wrapper">
+		{include snippets/category-nav.php, main_categoires_style => $main_categoires_style, categories=>$categories}
+	</div>
+</div>
+<!-- End .section-category-holder -->
 
-		<h1 class="entry-title">{!$term->name}</h1>
-
-		<div class="clearfix">
-			<div class="category-breadcrumb clearfix">
-				<span class="here">{__ 'You are here:'}</span>
-				<span class="home"><a href="{!$homeUrl}">{__ 'Home'}</a>&nbsp;&nbsp;&gt;</span>
-				{foreach $ancestors as $anc}
-				{first}<span class="ancestors">{/first}
-					<a href="{!$anc->link}">{!$anc->name}</a>&nbsp;&nbsp;&gt;
-				{last}</span>{/last}
-				{/foreach}
-				<span class="name"><a href="{!$term->link}">{!$term->name}</a></span>
+<!-- Begin .section-category-form -->
+<div class="section-category-form clearfix">
+	<div class="wrapper">
+		<!-- Begin .category-form-holder -->
+		<div class="category-form-holder categoty-food-form-holder">
+			<div class="category-title">
+				<h1>{!$term->name}</h1>
 			</div>
-
-			{include 'snippets/sorting.php'}
+			<div class="category-form">
+				<form action="{$term->link}">
+				<div class="item-search right">
+					<input type="submit" value="{__ '搜索'}" class="item-searchsubmit">
+				</div>
+				<div class="categoty-location right">
+					<select id="locations" name="locations">
+						<option>按区域搜索</option>
+						{if count($hLocations) > 0}
+						{foreach $hLocations as $hL}
+						{var $selected = $location == $hL->term_id ? 'selected' : ''}
+						<option {$selected} value="{$hL->term_id}">{!$hL->name}</option>
+						{if count($hL->children)}
+						{foreach $hL->children as $l}
+						{var $selected = $location == $l->term_id ? 'selected' : ''}
+						<option {$selected} value="{$l->term_id}">--{!$l->name}</option>
+						{/foreach}
+						{/if}
+						{/foreach}
+						{/if}
+					</select>
+				</div>
+				<div class="categoty-options right">
+					<select id="ait-dir-item-category" name="ait-dir-item-category">
+						<option value="{$term->slug}">按饭店类型搜索</option>
+						{if count($subcategories) > 0}
+						{foreach $subcategories as $category}
+						{var $selected = $curent_category == $category->term_id ? 'selected' : ''}
+						<option {$selected} value="{$category->slug}">{!$category->name}</option>
+						{/foreach}
+						{/if}
+					</select>
+				</div>
+			</form>
+			</div>
 		</div>
-		
-		{if count($subcategories) > 0}
-		<div class="category-subcategories whiteBg clearfix">
-			{var $i = 0}
-			{foreach $subcategories as $category}
-			{var $i++}
-			{first}<ul class="subcategories">{/first}
-				<li class="category sc-column {if $i == 4}sc-column-last {/if}one-fourth{if $i == 4}-last{/if}{if $i%2 == 0} responsive-last{/if}">
-					<div class="category-wrap-table">
-						<div class="category-wrap-row">
-														<div class="heading">
-								<div class="icon" style="background: url('{thumbnailResize $category->icon, w => 48, h => 48 }') no-repeat center top;"></div>
-								<h3><a href="{!$category->link}">{!$category->name}</a></h3>
+		<!-- Begin .category-form-holder -->
+		<div class="category-food-mobile-holder">
+			<div class="holder-title">
+				<div><span>精确搜索</span></div>
+			</div>
+			<div class="holder-detail">
+				<a class="close">close</a>
+				<div class="action-title"><span>搜索筛选标签</span><a href="">清除搜索选项</a></div>
+				<div class="action clearfix"><span class="t">按照</span><select><option>相关联项</option><option>相关联项</option></select><a href="">搜索</a></div>
+				<div class="filter clearfix">
+					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
+					<ul>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+					</ul>
+					<div class="expand clearfix">更多选项</div>
+				</div>
+				<div class="filter clearfix">
+					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
+					<ul>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+					</ul>
+					<div class="expand clearfix">更多选项</div>
+				</div>
+				<div class="filter clearfix">
+					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
+					<ul>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li><li>
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+						<li class="collapse">
+							<span class="f-input"><input type="checkbox"><label></label></span> 
+							<span class="f-value">Sydney</span>
+							<span class="f-num">150</span>
+						</li>
+					</ul>
+					<div class="expand clearfix">更多选项</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End section-category-form -->
+
+<!-- End section-newest -->
+<div class="section-list">
+	<div class="wrapper">
+		<div class="list">
+
+			{foreach $items as $item}
+			{var $optionsDir = $item->optionsDir}
+			<div class="bs-item clearfix">
+					<div class="item-detail-img-feature left">
+						{if $item->thumbnailDir}
+							<a href="{!$item->link}"><img src="{thumbnailResize $item->thumbnailDir, w => 280, h => 196}" alt="{__ 'Item thumbnail'}"></a>
+						{else}
+							<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
+						{/if}
+						
+					</div>
+					<div class="item-detail-header left clearfix">
+						<div class="thumb-and-name">
+							<div class="img-thumb left">
+							{if $optionsDir['logo']}
+								<a href="{!$item->link}"><img src="{thumbnailResize $optionsDir['logo'], w => 61, h => 42}"></a>
+							{else}
+								<a href="{!$item->link}"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+							{/if}
 							</div>
-							<div class="description">
-								{!$category->excerpt}
+							<div class="detail left">
+								<a href="{!$item->link}">
+								<h3>{$item->post_title}</h3>
+								{ifset $optionsDir['engName']}
+								<h4>{!$optionsDir['engName']}</h4>
+								{/ifset}
+								</a>
 							</div>
 						</div>
+						<div class="clear"></div>
+						<div class="desc-and-contact clearfix">
+							<div class="desc">
+								{!$item->excerptDir}
+							</div>
+							<ul class="clearfix">
+								
+								{ifset $optionsDir['address']}
+								<li class="item-detail-addr">{$optionsDir['address']}</li>
+								{/ifset}
+
+								{ifset $optionsDir['telephone']}
+								<li class="item-detail-tel">{$optionsDir['telephone']}</li>
+								{/ifset}
+
+							</ul>
+							<div class="phone-email clearfix">
+								<ul>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
+								</ul>
+							</div>
+						</div>
+						
 					</div>
-				</li>
-				{if $i == 4}
-				<li class="clearfix"></li>
-					{var $i = 0}
-				{/if}
-			{last}</ul>{/last}
+			</div>
 			{/foreach}
 		</div>
-		{/if}
-
+		<div class="list-banner">
+			
+		</div>
 	</div>
-</header>
-
-<div id="content" role="main">
-<div id="primary">
-
-<article id="post-item-category">
-
-	<div class="entry-content">
-		{!$term->description}
-	</div>
-
-	<div class="category-items items clearfix">
-
-		<ul n:foreach="$posts as $item" class="items items-list-view">			
-			<li class="item clearfix{ifset $item->packageClass} {$item->packageClass}{/ifset}{last} item-last{/last}{ifset $item->optionsDir['featured']} featured{/ifset}">
-				<div class="item-content-wrapper clearfix left">
-					{if $item->thumbnailDir}
-					<div class="item-thumbnail left">
-						<a href="{!$item->link}"><img src="{thumbnailResize $item->thumbnailDir, w => 84, h => 84}" alt="{__ 'Item thumbnail'}"></a>
-					</div>
-					{/if}
-					<div class="item-description left">
-						<h3 class="item-title"><a href="{!$item->link}">{$item->title}</a></h3>
-						<p class="item-excerpt">{!$item->excerptDir}</p>
-						<div class="item-meta">
-							{var $optionsDir = $item->optionsDir}
-							{ifset $optionsDir['address']}
-							<div class="item-meta-information item-address left">{$optionsDir['address']}</div>
-							{/ifset}
-
-							{if !empty($optionsDir['web'])}
-							<div class="item-meta-information item-address left"><a href="{aitAddHttp($optionsDir['web'])}">{$optionsDir['web']}</a></div>
-							{/if}
-
-							{ifset $optionsDir['email']}
-							<div class="item-meta-information item-meta-information-last item-address left"><a href="mailto:{$optionsDir['email']}">{$optionsDir['email']}</a></div>
-							{/ifset}
-						</div>
-					</div>
-				</div>
-
-				{ifset $themeOptions->rating->enableRating}
-				<div class="item-rating rating-grey right">
-					{if $item->rating}
-					<div class="item-stars clearfix">
-						{for $j = 1; $j <= $item->rating['max']; $j++}
-						<span class="star{if $j <= $item->rating['val']} active{/if}{if $j == $item->rating['max']} last{/if}"></span>
-						{/for}
-					</div>
-					{else}
-					<div class="item-no-rating">{__ "No rating yet."}</div>
-					{/if}
-				</div>
-				{/ifset}
-			</li>
-		</ul>
-	</div>
-	
-	{willPaginate}
-	<nav class="paginate-links">
-		{paginateLinks true}
-	</nav>
-	{/willPaginate}
-
-</article><!-- /#post-item-category -->
-
-{ifset $themeOptions->advertising->showBox4}
-<div id="advertising-box-4" class="advertising-box wrapper-650">
-    {!$themeOptions->advertising->box4Content}
 </div>
-{/ifset}
-
-</div> <!-- /#primary -->
-</div>
+{include 'cate-items-js.php'}
 {/block}
