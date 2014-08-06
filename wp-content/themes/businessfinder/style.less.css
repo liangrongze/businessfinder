@@ -1636,8 +1636,10 @@ a.button.add-item                           { float: none; display: inline-block
 .section-ad-contact .contact-form .form-holder .wpcf7-submit{width: 44%;background: #97ce00;color: #fff;font-size: 17px;font-weight: bold;position: absolute;bottom: -50px;border-radius: 0px 0px 10px 10px;height: 40px;}
 .section-ad-contact .contact-form .form-holder label {color: #666666;background-color: #ffffff;font-weight: bold;position: absolute;top: -28px;z-index: 10;color:#999;}
 .section-ad-contact .contact-form .form-holder p input, .section-ad-contact .contact-form .form-holder p textarea{padding-left: 10px;background: #eee;border: 0;width: 90%;border-radius: 5px;}
-.section-ad-contact .contact-form .form-holder p input{height: 35px;line-height: 30px;}
+.section-ad-contact .contact-form .form-holder p input{height: 35px;line-height: 30px;padding:0;}
 .section-ad-contact .contact-form  .ajax-loader{position: absolute;bottom: -38px;margin-left: 8px;}
+div.wpcf7{margin-bottom:0px;}
+.section-ad-contact .contact-form .form-holder p:last-child{margin-top:0;}
 
 .section-ad-contact .ad{margin-left:1%;width:58%;float:left;}
 .section-ad-contact .ad img{width:580px;height:255px;border-radius:5px;}
@@ -1929,6 +1931,7 @@ a.button.add-item                           { float: none; display: inline-block
 	.section-newest .bs-item .item-detail-addr{background-position: 0px -1px;}
 	.section-newest .bs-item .item-detail-tel{background-position: 1px -31px;}
 	.section-newest	.newest-more{text-align: center;margin-top: 10px;color:#444;}
+	.section-newest	.item-hide{display:none;}
 	
 	.section-contact-mobile {margin:10px;display:block;}
 	.section-contact-mobile .wrapper{background: #fff;border-radius: 10px;padding: 2%;width: 96%;}

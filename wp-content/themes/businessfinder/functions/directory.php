@@ -188,6 +188,64 @@ function getItems($category = 0, $location = 0, $search = '', $radius = array())
 
 }
 
+function countNewestItems(){
+	global $wpdb;
+
+	$oldest = date('Y-m-d', strtotime('-430 days'));
+	
+	$items = $wpdb->get_results("SELECT count(*) as total "
+		."FROM $wpdb->posts "
+		."WHERE post_date >= '$oldest' "
+		."AND post_type = 'ait-dir-item' AND post_status = 'publish' "
+	);
+	return $items[0]->total;
+}
+function getNewestItems($limit=10, $offest=0){
+	global $wpdb;
+
+	$oldest = date('Y-m-d', strtotime('-430 days'));
+	
+	$items = $wpdb->get_results("SELECT * "
+		."FROM $wpdb->posts "
+		."WHERE post_date >= '$oldest' "
+		."AND post_type = 'ait-dir-item' AND post_status = 'publish' "
+		."ORDER by post_date DESC LIMIT $offest, $limit"
+	);
+
+	foreach ($items as $key => $item) {
+		// options
+		$item->optionsDir = get_post_meta($item->ID, '_ait-dir-item', true);
+		// filter radius
+		if(!empty($radius) && !isPointInRadius($radius[0], $radius[1], $radius[2], $item->optionsDir['gpsLatitude'], $item->optionsDir['gpsLongitude'])){
+			unset($items[$key]);
+		} else {
+			// link
+			$item->link = get_permalink($item->ID);
+			// thumbnail
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id($item->ID), 'full' );
+			if($image !== false){
+				$item->thumbnailDir = $image[0];
+			} else {
+				$item->thumbnailDir = $GLOBALS['aitThemeOptions']->directory->defaultItemImage;
+			}
+			// marker
+			$terms = wp_get_post_terms($item->ID, 'ait-dir-item-category');
+			$termMarker = $GLOBALS['aitThemeOptions']->directoryMap->defaultMapMarkerImage;
+			if(isset($terms[0])){
+				$termMarker = getCategoryMeta("marker", intval($terms[0]->term_id));
+			}
+			$item->marker = $termMarker;
+			// excerpt
+			$item->excerptDir = aitGetPostExcerpt($item->post_excerpt,$item->post_content);
+			// package class
+			$item->packageClass = getItemPackageClass($item->post_author);
+			// rating
+			$item->rating = get_post_meta( $item->ID, 'rating', true );
+		}
+	}
+
+	return $items;
+}
 // allow ajax
 add_action( 'wp_ajax_get_items', 'getItemsAjax' );
 add_action( 'wp_ajax_nopriv_get_items', 'getItemsAjax' );

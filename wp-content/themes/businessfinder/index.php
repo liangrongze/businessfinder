@@ -7,52 +7,26 @@
  */
 
 // directory search
-$latteParams['type'] = (isset($_GET['dir-search']) && isset($_GET['s'])) ? true : false;
-if($latteParams['type']){
-	// show all items on map
-	if(isset($aitThemeOptions->search->searchShowMap)){
-		$radius = array();
-		if(isset($_GET['geo'])){
-			$radius[] = $_GET['geo-radius'];
-			$radius[] = $_GET['geo-lat'];
-			$radius[] = $_GET['geo-lng'];
-		}
-		$latteParams['items'] = getItems(intval($_GET['categories']),intval($_GET['locations']),$GLOBALS['wp_query']->query_vars['s'],$radius);
-	}
 
-	$latteParams['posts'] = getDirItemsDetails($wp_query->posts);
+$latteParams['page'] = ( isset($_GET['page']) AND in_array($_GET['page'],array('newest')) ) ? $_GET['page'] : 'newest';
+/*
+$categories = get_terms('ait-dir-item-category', array(
+	'hide_empty'		=> false,
+	'orderby'			=> 'name',
+	'parent' => 0
+));
 
-} else {
-	
-	$latteParams['posts'] = WpLatte::createPostEntity($GLOBALS['wp_query']->posts);
+$latteParams['main_categoires_style'] = render_main_category_style($categories);
+$latteParams['open'] = 'style';
+$latteParams['close'] = 'style';
+$latteParams['categories'] = $categories;
+*/
 
-	// if this is "Blog" page get the right template
-	if($GLOBALS['wp_query']->is_home && $GLOBALS['wp_query']->is_posts_page){
-		$template = get_page_template();
-		if($template = apply_filters('template_include', $template)){
-			if(substr($template, -8, 8) != 'page.php'){
-				require_once $template;
-				return; // ends executing this script
-			}
-		}
-	}
-
-	// no page was selected for "Posts page" from WP Admin in Settings->Reading
-	$latteParams['isIndexPage'] = true;
-
-	if(isset($GLOBALS['wp_query']->queried_object)){
-
-		$latteParams['post'] = WpLatte::createPostEntity(
-			$GLOBALS['wp_query']->queried_object,
-			array(
-				'meta' => $GLOBALS['pageOptions'],
-		));
-
-		$latteParams['isIndexPage'] = false;
-	}
-
+switch($latteParams['page']){
+	case "newest":
+	$latteParams['posts'] = getNewestItems(100000);
+	$latteParams['postsTotal'] = countNewestItems();
+	break;
 }
-
-$latteParams['sidebarType'] = 'sidebar-1';
-
 WPLatte::createTemplate(basename(__FILE__, '.php'), $latteParams)->render();
+

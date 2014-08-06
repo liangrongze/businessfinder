@@ -192,6 +192,7 @@ function HomeDisplayCategory(){
 		$j('.sub-category-holder').flexslider({
 			animation: "slide"
 		});
+		HomeLoadMore();
 	}else{
 		$j('.sub-category-holder').flexslider({
 			animation: "slide",
@@ -201,7 +202,19 @@ function HomeDisplayCategory(){
 	
 	$j('.ads').flexslider({animation: "slide"});
 }
-
+function HomeLoadMore(){
+	$j('.newest-more a').click(function (event){
+		event.preventDefault();
+		if( $j(".section-newest .item-hide").length > 0 ){
+			$j(".section-newest .item-hide").each(function (){
+				$j(this).removeClass('item-hide');
+			});
+		}else{
+			var url = $j(this).attr('href');
+			window.location.href = url;
+		}
+	});
+}
 function loadScript(callback) {
     var script = document.createElement('script');
     script.type = 'text/javascript';

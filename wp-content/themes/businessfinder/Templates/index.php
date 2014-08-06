@@ -1,107 +1,80 @@
 {extends $layout}
 
 {block content}
-
-{if $posts}
-	
-	{if $type}
-
-	<header class="entry-header search-header">
-		<div class="wrapper">
-			<h1 class="entry-title"><span>{__ 'Search Results for:'} <strong>{!$site->searchQuery}</strong></span></h1>
-			<div class="clearfix">
-				<div class="breadcrumbs left clearfix">{breadcrumbs}</div>
-				{if $type}
-				<div class="right">
-					{include 'snippets/sorting.php'}
-				</div>
-				{/if}
-			</div>
-		</div>
-	</header>
-
-	<div id="content" class="onecolumn" role="main">
-		<div id="primary">
-			{include snippets/content-loop-dir-search.php posts => $posts}
-
-			{willPaginate}
-			<nav class="paginate-links">
-				{paginateLinks true}
-			</nav>
-			{/willPaginate}
-
-			{ifset $themeOptions->advertising->showBox4}
-			<div id="advertising-box-4" class="advertising-box wrapper-650">
-			    {!$themeOptions->advertising->box4Content}
-			</div>
-			{/ifset}
-		</div> <!-- /#primary -->
-	{else}
-
-		{if !$isIndexPage}
-
-		<header class="entry-header">
-			<div class="wrapper">
-
-				<h1 class="entry-title">
-					<a href="{$post->permalink}" title="{__ 'Permalink to'} {$post->title}" rel="bookmark">{$post->title}</a>
-				</h1>
-				<span class="breadcrumbs">{breadcrumbs}</span>
-				
-			</div>
-		</header>
-			
-			{* {if $post->thumbnailSrc}
-			<a href="{!$post->thumbnailSrc}">
-				<div class="entry-thumbnail"><img src="{thumbnailResize $post->thumbnailSrc, w => 140, h => 200}" alt=""></div>
-			</a>
-			{/if} *}		
-		{/if}
-
-		<div id="content" role="main">
-			<div id="primary">
-
-				<article {if !$isIndexPage}id="post-{$post->id}" class="{$post->htmlClasses}"{else}id="post-loop"{/if}>
-					
-					{if !$isIndexPage}
-					<div class="entry-content">
-						{!$post->content}
-					</div>
-					{/if}
-
-					{include snippets/content-nav.php location => 'nav-above'}
-
-					{include snippets/content-loop.php posts => $posts}
-
-					{include snippets/content-nav.php location => 'nav-below'}
-
-				</article><!-- /#post -->	
-				
-				{ifset $themeOptions->advertising->showBox4}
-				<div id="advertising-box-4" class="advertising-box wrapper-650">
-				    {!$themeOptions->advertising->box4Content}
-				</div>
-				{/ifset}
-
-			</div> <!-- /#primary -->
-
-	{/if}
-
-{else}
-	<div id="content" role="main">
-		<div id="primary">
-			{include snippets/nothing-found.php}
-		</div> <!-- /#primary -->
-
-{/if}
-
-{if !$type}
-{isActiveSidebar sidebar-1}
-<div id="secondary" class="widget-area" role="complementary">
-	{dynamicSidebar sidebar-1}
+<!-- Begin .section-category-holder -->
+<div class="section-category-holder">
+	<div class="wrapper">
+		Newest items
+	</div>
 </div>
-{/isActiveSidebar}
-{/if}
+<!-- End .section-category-holder -->
 
-</div> <!-- /#content -->
+<!-- End section-newest -->
+<div class="section-list">
+	<div class="wrapper">
+		<div class="list">
+
+			{foreach $posts as $item}
+			{var $optionsDir = $item->optionsDir}
+			<div class="bs-item clearfix">
+					<div class="item-detail-img-feature left">
+						{if $item->thumbnailDir}
+							<a href="{!$item->link}"><img src="{thumbnailResize $item->thumbnailDir, w => 280, h => 196}" alt="{__ 'Item thumbnail'}"></a>
+						{else}
+							<img src="wp-content/themes/businessfinder/design/img/item-feature.png">
+						{/if}
+						
+					</div>
+					<div class="item-detail-header left clearfix">
+						<div class="thumb-and-name">
+							<div class="img-thumb left">
+							{if $optionsDir['logo']}
+								<a href="{!$item->link}"><img src="{thumbnailResize $optionsDir['logo'], w => 61, h => 42}"></a>
+							{else}
+								<a href="{!$item->link}"><img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png"></a>
+							{/if}
+							</div>
+							<div class="detail left">
+								<a href="{!$item->link}">
+								<h3>{$item->post_title}</h3>
+								{ifset $optionsDir['engName']}
+								<h4>{!$optionsDir['engName']}</h4>
+								{/ifset}
+								</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="desc-and-contact clearfix">
+							<div class="desc">
+								{!$item->excerptDir}
+							</div>
+							<ul class="clearfix">
+								
+								{ifset $optionsDir['address']}
+								<li class="item-detail-addr">{$optionsDir['address']}</li>
+								{/ifset}
+
+								{ifset $optionsDir['telephone']}
+								<li class="item-detail-tel">{$optionsDir['telephone']}</li>
+								{/ifset}
+
+							</ul>
+							<div class="phone-email clearfix">
+								<ul>
+									<li><a href="?page_id=8561">发邮件</a></li>
+									<li><a href="?page_id=8561">发信息</a></li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+			</div>
+			{/foreach}
+		</div>
+		<div class="list-banner">
+			
+		</div>
+	</div>
+</div>
+{include 'cate-items-js.php'}
 {/block}

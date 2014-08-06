@@ -60,6 +60,11 @@ foreach($sub_categories AS $sub_category){
 $latteParams['sub_categories'] = $temp;
 
 $latteParams['sub_categoires_style'] = render_sub_category_style($sub_categories);
+
+// for mobile view
+$latteParams['newPosts'] = getNewestItems(10);
+$latteParams['newPostsTotal'] = countNewestItems();
+
 /**
  * Fire!
  */

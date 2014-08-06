@@ -54,57 +54,53 @@
 </div>
 <!-- End .section-category-holder -->
 
-<!-- Begin .section-ad-contact -->
-<div class="section-ad-contact clearfix">
-	<div class="wrapper">
-		{!$post->content}
-	</div>
-</div>
-<!-- End section-ad-contact -->
+{!$post->content}
 
 <!-- End section-newest -->
 <div class="section-newest">
 	<div class="wrapper">
 		<div class="newest-header">
 			<h3>最近更新</h3>
-			<span>186项</span>
+			<span>{$newPostsTotal}项</span>
 		</div>
-		<div class="bs-item clearfix">
+		{var $i=1}
+		{foreach $newPosts as $item}
+		{var $optionsDir = $item->optionsDir}
+		<div class="bs-item clearfix {if $i>5} item-hide {/if}">
 			<div class="item-detail-top">
-				<a href="?page_id=8561">
+				<a href="{!$item->link}">
 				<div class="item-detail-img-thumb">
-					<img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png">
+					{if $item->thumbnailDir}
+						<a href="{!$item->link}"><img src="{thumbnailResize $item->thumbnailDir, w => 62, h => 48}" alt="{__ 'Item thumbnail'}"></a>
+					{else}
+						<img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png">
+					{/if}
 				</div>
 				<div class="item-detail-header clearfix">
-					<h3>飓风酒吧餐厅</h3>
-					<h4>Huricans' Grill & Bar Bondi Beach</h4>
+					<a href="{$item->link}">
+					<h3>{$item->post_title}</h3>
+					{ifset $optionsDir['engName']}
+					<h4>{!$optionsDir['engName']}</h4>
+					{/ifset}
+				</a>
 				</div>
 				</a>
 			</div>
 			<ul class="clearfix">
-				<li class="item-detail-addr">130 Rosoe Street, Bondi Beach, NSW 2026</li>
-				<li class="item-detail-tel">(02) 9876 0987</li>
+				{ifset $optionsDir['address']}
+				<li class="item-detail-addr">{$optionsDir['address']}</li>
+				{/ifset}
+
+				{ifset $optionsDir['telephone']}
+				<li class="item-detail-tel">{$optionsDir['telephone']}</li>
+				{/ifset}
+				
 			</ul>
 		</div>
-		<div class="bs-item clearfix">
-			<div class="item-detail-top">
-				<a href="?page_id=8561">
-				<div class="item-detail-img-thumb">
-					<img src="wp-content/themes/businessfinder/design/img/bs-thumb-1.png">
-				</div>
-				<div class="item-detail-header clearfix">
-					<h3>飓风酒吧餐厅</h3>
-					<h4>Huricans' Grill & Bar Bondi Beach</h4>
-				</div>
-				</a>
-			</div>
-			<ul class="clearfix">
-				<li class="item-detail-addr">130 Rosoe Street, Bondi Beach, NSW 2026</li>
-				<li class="item-detail-tel">(02) 9876 0987</li>
-			</ul>
-		</div>
+		{var $i++}
+		{/foreach}
 		<div class="newest-more">
-			<a href="">显示更多</a>
+			<a href="{$homeUrl}?s=&locations=&page=newest">显示更多</a>
 		</div>
 	</div>
 </div>
@@ -123,19 +119,6 @@
 </div>
 <!-- End section-contact-mobile -->
 
-<!-- End section-subscription -->
-<div class="section-subscription clearfix">
-	<div class="wrapper">
-		<div>
-			<p>
-				<label>现在订阅我们的E－MAIL<br />即可得到更多优惠信息</label>
-				<span class="s-button"><input value="订阅" type="submit"></span>
-				<span class="s-email"><input type="text" name=""></span>
-				
-			</p>
-		</div>
-	</div>
-</div>
 <!-- End section-nesubscriptionwest -->
 {include 'home-js.php'}
 {/block}
