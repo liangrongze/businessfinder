@@ -90,6 +90,7 @@
 
 		if (data.invalids) {
 			$.each(data.invalids, function(i, n) {
+				alert(n.message);return;
 				$form.find(n.into).wpcf7NotValidTip(n.message);
 				$form.find(n.into).find('.wpcf7-form-control').addClass('wpcf7-not-valid');
 				$form.find(n.into).find('[aria-invalid]').attr('aria-invalid', 'true');
@@ -133,7 +134,8 @@
 		$form.find('[placeholder].placeheld').each(function(i, n) {
 			$(n).val($(n).attr('placeholder'));
 		});
-
+		
+		alert(data.message);return;
 		$responseOutput.append(data.message).slideDown('fast');
 		$responseOutput.attr('role', 'alert');
 
@@ -229,6 +231,7 @@
 	$.fn.wpcf7NotValidTip = function(message) {
 		return this.each(function() {
 			var $into = $(this);
+			alert(message);return;
 			$into.hide().append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>').slideDown('fast');
 
 			if ($into.is('.use-floating-validation-tip *')) {

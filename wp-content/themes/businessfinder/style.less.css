@@ -1640,7 +1640,7 @@ a.button.add-item                           { float: none; display: inline-block
 .section-ad-contact .contact-form  .ajax-loader{position: absolute;bottom: -38px;margin-left: 8px;}
 div.wpcf7{margin-bottom:0px;}
 .section-ad-contact .contact-form .form-holder p:last-child{margin-top:0;}
-
+.es_msg{margin-left:20px;}
 .section-ad-contact .ad{margin-left:1%;width:58%;float:left;}
 .section-ad-contact .ad img{width:580px;height:255px;border-radius:5px;}
 .section-ad-contact .ads .flex-control-paging{bottom: 20px;left: 30px;text-align:left;}

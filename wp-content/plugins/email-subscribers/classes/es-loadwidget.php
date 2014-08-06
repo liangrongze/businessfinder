@@ -22,7 +22,7 @@ class es_cls_widget
 		// {
 			// $es = $es . '<div class="es_caption">'.$es_desc.'</div>';
 		// }
-		$es = $es . '<div class="es_msg"><span id="es_msg_pg"></span></div>';
+		
 		/*if( $es_name == "YES" ) 
 		{
 			$es = $es . '<div class="es_lablebox">'.__('Name', ES_TDOMAIN).'</div>';
@@ -36,7 +36,7 @@ class es_cls_widget
 				<span class="s-email"><input class="es_textbox_class" name="es_txt_email_pg" id="es_txt_email_pg" onkeypress="if(event.keyCode==13) es_submit_pages('.$url.')" value="" maxlength="225" type="text"></span>
 				
 			</p>';
-		
+		$es = $es . '<div class="es_msg" ><span id="es_msg_pg"></span></div>';
 		if( $es_name != "YES" ) 
 		{
 			$es = $es . '<input name="es_txt_name_pg" id="es_txt_name_pg" value="" type="hidden">';
