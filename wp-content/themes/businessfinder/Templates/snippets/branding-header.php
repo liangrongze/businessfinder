@@ -53,7 +53,7 @@
 	data-interactive="{ifset $themeOptions->search->enableInteractiveSearch}yes{else}no{/ifset}">
 		<div class="wrapper">
 			<form action="{$homeUrl}" id="dir-search-form" method="get" class="dir-searchform">
-				
+				<input type="hidden" name="ait-dir-item-category" value="">
 				<div class="first-row clearfix">
 					<div class="basic-search-form clearfix">
 						<div id="dir-search-inputs">

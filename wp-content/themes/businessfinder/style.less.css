@@ -1905,14 +1905,14 @@ div.wpcf7{margin-bottom:0px;}
 	.sub-category-holder .sub-item-holder .sub-cate-list>table>tbody>tr>td>div{margin: 4px;background: #ffffff;padding: 3px;border-radius: 10px;}
 	.sub-category-holder .sub-item-holder .sub-cate-list>table>tbody>tr>td>div span{padding-top: 2px;font-size:12px;}
 	.sub-category-holder .flex-direction-nav{display:block;}
-	.sub-category-holder .flex-direction-nav a{width:20px;height:30px;}
+	.sub-category-holder .flex-direction-nav a{width:25px;height:30px;}
 	.sub-category-holder .flex-direction-nav .flex-prev{top:35px;left:30%;}
 	.sub-category-holder .flex-direction-nav .flex-next{top:35px;right:30%;}
 	.sub-category-holder .flex-control-nav{display:none;}
 	.sub-category-holder .sub-item-holder .sub-cate-list>table>tbody>tr>td{border:0;}
-	.sub-category-holder .flex-direction-nav a{background: url(design/img/bg_direction_nav.png) no-repeat 0 0;}
-	.sub-category-holder .flex-direction-nav a.flex-next{background-position:-24px 0;}
-	.sub-category-holder .flex-direction-nav a.flex-prev{background-position:6px 0;}
+	.sub-category-holder .flex-direction-nav a{/*background: url(design/img/bg_direction_nav.png) no-repeat 0 0;*/}
+	.sub-category-holder .flex-direction-nav a.flex-next{background: url('design/img/icon_arrow_right.png') -1px 0px no-repeat transparent;background-size: 30px 30px;}
+	.sub-category-holder .flex-direction-nav a.flex-prev{background: url('design/img/icon_arrow_left.png') -2px 0px no-repeat transparent;background-size: 30px 30px;}
 	
 	.section-newest{margin: 20px 10px 10px 10px;display:block;}
 	.section-newest a,.section-newest h3,.section-newest h4,.section-newest span{color:#00a4ff}
@@ -1927,9 +1927,9 @@ div.wpcf7{margin-bottom:0px;}
 	.section-newest .bs-item .item-detail-top .item-detail-header h3{margin-bottom: 3px;font-size: 18px;}
 	.section-newest .bs-item .item-detail-top .item-detail-header h4{font-size: 14px;}
 	.section-newest .bs-item  ul{font-size:13px;float:left;clear:both;}
-	.section-newest .bs-item li{background:url('design/img/detail-icon.png') no-repeat transparent;padding-left: 32px;line-height: 25px;font-size: 13px;overflow: hidden;}
-	.section-newest .bs-item .item-detail-addr{background-position: 0px -1px;}
-	.section-newest .bs-item .item-detail-tel{background-position: 1px -31px;}
+	.section-newest .bs-item li{/*background:url('design/img/detail-icon.png') no-repeat transparent;*/padding-left: 32px;line-height: 25px;font-size: 13px;overflow: hidden;}
+	.section-newest .bs-item .item-detail-addr{background: url('design/img/icon_map_pin_50.png') -9px -6px no-repeat;background-size: 45px 40px;}
+	.section-newest .bs-item .item-detail-tel{background: url('design/img/icon_tel_50.png') 1px 0px no-repeat;background-size: 26px 26px;}
 	.section-newest	.newest-more{text-align: center;margin-top: 10px;color:#444;}
 	.section-newest	.item-hide{display:none;}
 	
@@ -1937,10 +1937,10 @@ div.wpcf7{margin-bottom:0px;}
 	.section-contact-mobile .wrapper{background: #fff;border-radius: 10px;padding: 2%;width: 96%;}
 	.section-contact-mobile .wrapper li{float:left;width:32%;border-right:1px solid #eee;line-height:20px;}
 	.section-contact-mobile .wrapper li:last-child{border-right:0;}
-	.section-contact-mobile .wrapper li a{padding-left: 26px;	font-size: 14px;background:url('design/img/detail-icon.png') no-repeat transparent;float:left;}
-	.section-contact-mobile .wrapper li .help {background-position: 0px -61px;}
-	.section-contact-mobile .wrapper li .contact {background-position: 0px -85px;}
-	.section-contact-mobile .wrapper li .feedback {background-position: 0px -111px;}
+	.section-contact-mobile .wrapper li a{padding-left: 26px;	font-size: 14px;/*background:url('design/img/detail-icon.png') no-repeat transparent;*/float:left;}
+	.section-contact-mobile .wrapper li .help {background: url('design/img/icon_question_50.png') 2px -2px no-repeat transparent;background-size: 27px 25px;}
+	.section-contact-mobile .wrapper li .contact {background: url('design/img/icon_email_50.png') 4px 1px no-repeat transparent;background-size: 20px 20px;}
+	.section-contact-mobile .wrapper li .feedback {background: url('design/img/icon_tel_50.png') 4px 1px no-repeat transparent;background-size: 20px 20px;}
 	
 	/* category items page*/
 	.section-category-form .wrapper .category-form-holder{display:none;}
