@@ -20,7 +20,7 @@ $latteParams['post'] = WpLatte::createPostEntity(
 
 $categories = get_terms('ait-dir-item-category', array(
 	'hide_empty'		=> false,
-	'orderby'			=> 'term_id',
+	'orderby'			=> 'id',
 	'parent' => 0
 ));
 
@@ -31,7 +31,7 @@ $latteParams['categories'] = $categories;
 
 $sub_categories = get_terms('ait-dir-item-category', array(
 	'hide_empty'		=> false,
-	'orderby'			=> 'term_id',
+	'orderby'			=> 'id',
 ));
 
 // format main category

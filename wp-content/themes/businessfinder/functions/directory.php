@@ -752,7 +752,7 @@ function render_main_category_style($categories = array()){
 		
 		$categories = get_terms('ait-dir-item-category', array(
 			'hide_empty'		=> false,
-			'orderby'			=> 'term_id',
+			'orderby'			=> 'id',
 			'parent !' => 0
 		));
 				
@@ -775,7 +775,7 @@ function render_sub_category_style($categories = array()){
 		
 		$categories = get_terms('ait-dir-item-category', array(
 			'hide_empty'		=> false,
-			'orderby'			=> 'term_id',
+			'orderby'			=> 'id',
 		));
 				
 	}

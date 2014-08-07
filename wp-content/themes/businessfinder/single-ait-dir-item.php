@@ -129,7 +129,7 @@ $latteParams['sidebarType'] = 'item';
 
 $categories = get_terms('ait-dir-item-category', array(
 	'hide_empty'		=> false,
-	'orderby'			=> 'term_id',
+	'orderby'			=> 'id',
 	'parent' => 0
 ));
 
