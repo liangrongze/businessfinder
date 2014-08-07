@@ -45,7 +45,7 @@ $latteParams['location'] = $_GET['locations'];
 
 $categories = get_terms('ait-dir-item-category', array(
 	'hide_empty'		=> false,
-	'orderby'			=> 'name',
+	'orderby'			=> 'term_id',
 	'parent' => 0
 ));
 
