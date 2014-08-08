@@ -65,13 +65,7 @@
 <!-- start .business-detail-part-2 -->
 <div class="business-detail-part-2">
 	<div class="wrapper">
-		<div class="m-address" style="
-		    color: #e77200;
-		    padding: 10px 20px;
-		    text-align: center;
-		    font-size: 15px;
-		    font-weight: bold;
-		">{$options['address']}</div>
+		<div class="m-address">{$options['address']}</div>
 		<div class="map" data-location="{$options['gpsLatitude']},{$options['gpsLongitude']},20">
 			<div id="map-canvas" class="left" style=""></div>
 			<div class="details left">
@@ -87,14 +81,7 @@
 					</div>
 			</div>
 		</div>
-		<div class="m-tel" style="
-		    color: #e77200;
-		    padding: 20px 20px 0px 10px;
-		    clear: both;
-		    text-align: center;
-		    font-size: 20px;
-		    font-weight: bold;
-		">联系电话：{$options['telephone']}</div>
+		<div class="m-tel">联系电话：{$options['telephone']}</div>
 	   <div class="clear"></div>
 		<div class="desc">
 			<article class="left">
