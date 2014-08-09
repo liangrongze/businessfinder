@@ -8,14 +8,7 @@
 		</ul>
 	</div>
 	<div class="foot-menu clearfix">
-		<nav>
-		<ul>
-			<li><a href="">价格</a></li>
-			<li><a href="">关于我们</a></li>
-			<li><a href="">发布广告</a></li>
-			<li><a href="">联系我们</a></li>
-		</ul>
-		</nav>
+		{menu 'theme_location' => 'footer-menu', 'fallback_cb' => 'default_page_menu', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'menu' }
 		<div class="foot-logo">
 			{if !empty($themeOptions->general->logo_img)}
 			<a class="trademark" href="{$homeUrl}">

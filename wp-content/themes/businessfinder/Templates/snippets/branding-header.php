@@ -38,15 +38,7 @@
 			</a>
 			{/if}
 		</div>
-		
-		<nav class="menu-container right">
-			<ul>
-				<li><a href="">价格</a></li>
-				<li><a href="">关于我们</a></li>
-				<li><a href="">发布广告</a></li>
- 				<li><a href="">联系我们</a></li>
-			</ul>
-		</nav>
+		{menu 'theme_location' => 'primary-menu', 'fallback_cb' => 'default_page_menu', 'container' => 'nav', 'container_class' => 'menu-container right', 'menu_class' => 'menu' }
 	</div>
 	
 	<div id="directory-search" class="regular-search"

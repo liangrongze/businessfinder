@@ -198,7 +198,7 @@
 <div class="section-list">
 	<div class="wrapper">
 		<div class="list">
-
+			{if count($items)>0}
 			{foreach $items as $item}
 			{var $optionsDir = $item->optionsDir}
 			<div class="bs-item clearfix">
@@ -255,9 +255,12 @@
 					</div>
 			</div>
 			{/foreach}
+			{else}
+			<div class="item-empty">暂没商家，请重新选择。</div>
+			{/if}
 		</div>
 		<div class="list-banner">
-			
+			{dynamicSidebar sidebar-item}
 		</div>
 	</div>
 </div>
