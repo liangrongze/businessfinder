@@ -222,7 +222,7 @@ blockquote cite                                           { color: #666; font: 1
     FOOTER
    ======================================================= */
 
-#colophon                                               { clear: both; }
+#colophon                                               { padding-top:20px;clear: both; }
 #supplementary                                          { padding: 60px 0; border-bottom: 1px solid #ddd; overflow: hidden; }
 
 .page-footer p                                          { color: @footerTextFontColor; }
@@ -775,16 +775,16 @@ ul.item-image-gallery, .jcarousel-clip-horizontal   { overflow: hidden; white-sp
     PAGINATION
    ======================================================= */
 
-.paginate-links                                     { margin: 0 0 40px; text-align: center; }
+.paginate-links                                     { margin: 20px 0 40px; text-align: center; }
 .paginate-links .page-nav                           { display: inline-block; }
 .paginate-links a:hover                             { color: #fff; }
-.paginate-links .page-numbers                       { .secondColorButton; display: inline-block; color: #fff; .transition(background, 1s); }
-.paginate-links .page-numbers:hover                 { .firstColorButton;  }
+.paginate-links .page-numbers                       { .secondColorButton; display: inline-block; color: #fff; .transition(background, 1s); padding: 5px 10px 5px 10px;background: #0b7cbf;border-bottom: 3px solid #0b7cbf !important;}
+.paginate-links .page-numbers:hover                 { .firstColorButton; padding: 5px 10px 5px 10px;background: #096398;border-bottom: 3px solid #096398 !important; }
 .paginate-links .page-numbers, .paginate-links .dots{ margin-right: 15px; }
 .paginate-links .page-numbers.next                  { margin: 0 0 0 75px; }
 .paginate-links .page-numbers.prev                  { margin: 0 75px 0 0; }
 .paginate-links .pagenumbers:last-child             { margin-right: 0; }
-.paginate-links .page-numbers.current               { .firstColorButton; }
+.paginate-links .page-numbers.current               { .firstColorButton; padding: 5px 10px 5px 10px; color:#0b7cbf; background: #fff;border-bottom: 3px solid #fff !important;}
 
 
 
@@ -1590,6 +1590,7 @@ a.button.add-item                           { float: none; display: inline-block
 .main-category{height:120px;background-color: #fff;border-radius: 8px;}
 .main-category a{display:inline;float:left;width: 20%;text-align: center;}
 .main-category a>div{width: 100%;height: 120px;border-right:1px solid #eee;color:#ffffff;}
+.main-category a:last-child>div{border-right:0;}
 
 /* Home page */  
 .sub-category-holder{background:#fff;height:428px;border-radius: 10px;}
@@ -1668,7 +1669,7 @@ div.wpcf7{margin-bottom:0px;}
 .section-category-form .wrapper .category-form{height: 50px;}
 .section-category-form .wrapper .category-form div{}
 .section-category-form .wrapper .category-form .item-search{margin: 10px;}
-.section-category-form .wrapper .category-form .item-search input{width: 100px;height: 30px;border: 0;border-radius: 15px;background: #ffc000;}
+.section-category-form .wrapper .category-form .item-search input{width: 100px;height: 30px;border: 0;border-radius: 15px;background: #ffc000;color:#F9F3F3;}
 .section-category-form .wrapper .category-form .categoty-location{}
 .section-category-form .wrapper .category-form .categoty-options{}
 .category-form-holder select{display:none;}
@@ -1676,7 +1677,7 @@ div.wpcf7{margin-bottom:0px;}
 .wrapper-dropdown-2 {	position: relative;	margin: 10px 0;	height: 30px;	background: #aa6cdd;	cursor: pointer;	outline: none;	background-size: 100%;	border-radius: 15px;	margin-left: 4px;	min-width: 120px;	transition: background-color 0.3s ease;	-webkit-transition: background-color 0.3s ease;}	
 .wrapper-dropdown-2:first-of-type {	margin-left: 10px;}
 .wrapper-dropdown-2 .selected:after {	content: " ";	width: 10px;	height: 6px;	position: absolute;	top: 12px;	right: 10px;	background: url(design/img/up-down.png);}
-.wrapper-dropdown-2 .selected {	line-height: 31px;	padding-left: 14px;	padding-right: 25px;	font: 14px/30px pns-bold;	white-space: nowrap;	overflow: hidden;	display: inline-block;	min-width: 120px;	border-radius: 15px 15px 0px 0;}
+.wrapper-dropdown-2 .selected {	line-height: 31px;	padding-left: 14px;	padding-right: 25px;	font: 14px/30px pns-bold;	white-space: nowrap;	overflow: hidden;	display: inline-block;	min-width: 120px;	border-radius: 15px 15px 0px 0;color:#F9F3F3;}
 .wrapper-dropdown-2.active .selected:after {background-position: 0 bottom;}
 .wrapper-dropdown-2 .dropdown {	position: absolute;	z-index: 200;	top: 100%;	left: 0;	right: 0px;	background: #fff;	background-size: 100% 100%;	list-style: none;	padding: 0 0 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;	transition: all 0.3s ease-out;	-webkit-transition: all 0.3s ease-out;	vertical-align: middle;	opacity: 0;	pointer-events: none;	margin: 0;	display: none;	height:160px;	overflow-y:auto;}
 .wrapper-dropdown-2 .dropdown li a {	display: block;	text-decoration: none;	color: #000;	transition: all 0.3s ease-out;	-webkit-transition: all 0.3s ease-out;	line-height: 1.3em;	padding: 7.5px 15px;	font-family: pns-medium;	font-size: 14px;}
@@ -1839,15 +1840,15 @@ div.wpcf7{margin-bottom:0px;}
 
 .section-gallery{	margin-bottom: 20px;}
 .section-gallery h3{color: #fff;padding-left:20px;}
-.section-gallery .carousel-holder {width: 760px !important;height: 110px;padding: 0 120px;position: relative;}
+.section-gallery .carousel-holder {width: 865px !important;height: 110px;padding: 0 65px;position: relative;}
 .section-gallery .carousel-holder a {display: block;float: left;position: relative;}
-.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next {position: absolute;width: 110px;height: 110px;border-radius: 55px;background: #5a2484;top: 0;right: 0;text-decoration: none;}
+.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next {position: absolute;width: 50px;height: 50px;border-radius: 55px;background: #5a2484;top: 0;right: 0;text-decoration: none;}
 .section-gallery .carousel-holder .prev {transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);-ms-transform: rotate(180deg);left: 0;}
-.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next, .section-gallery .carousel-holder a .play > img {background: #e57200;}
+.section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next, .section-gallery .carousel-holder a .play > img {background: #e57200;top:40px;}
 .section-gallery .carousel-holder .next:before, .section-gallery .carousel-holder .prev:before {content: url(design/img/right-arrow.png);position: relative;left: 5px;}
-.section-gallery .carousel-holder .caroufredsel_wrapper {width: 760px !important;}
-.section-gallery .carousel-holder .carousel a {width: 112px;height: 110px;border-radius: 10px;overflow: hidden;margin-right: 17px;}
-.section-gallery .carousel-holder img {padding: 0;display: block;float: left;border-radius: 10px;width: 112px;height: 110px;}
+.section-gallery .carousel-holder .caroufredsel_wrapper {width: 865px !important;}
+.section-gallery .carousel-holder .carousel a {width: 160px;height: 130px;border-radius: 10px;overflow: hidden;margin-right: 17px;}
+.section-gallery .carousel-holder img {padding: 0;display: block;float: left;border-radius: 10px;width: 160px;height: 130px;}
 .section-gallery .carousel-holder a .play {opacity: 0;width: 106px;height: 104px;border-radius: 10px;position: absolute;top: 0;left: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;border-color: #c25615;}
 .section-gallery .carousel-holder a .play > img {width: 38px;height: 38px;background: #5a2484;border-radius: 19px;position: absolute;top: 50%;left: 50%;margin-top: -19px;margin-left: -19px;background: #e57200;}
 .section-gallery .carousel-holder .carousel a:after {content: " ";position: absolute;background: url(design/img/eatdrink.png);width: 112px;height: 110px;top: 0;left: 0;border-radius: 10px;overflow: hidden;opacity: 0.4;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}

@@ -1,12 +1,12 @@
 <?php
 
-add_filter('pre_get_posts','aitDirMainQuery');
+// add_filter('pre_get_posts','aitDirMainQuery');
 function aitDirMainQuery($query) {
 	global $aitThemeOptions;
 	// only main query
 	if($query->is_main_query() && !$query->is_admin){
 
-		if(isset($_GET['dir-search']) && isset($_GET['s']) && isset($_GET['categories']) && isset($_GET['locations'])){
+		if( isset($_GET['s']) && isset($_GET['categories']) && isset($_GET['locations'])){
 
 			$query->set('post_type','ait-dir-item');
 
@@ -34,54 +34,7 @@ function aitDirMainQuery($query) {
 			$num = (isset($GLOBALS['aitThemeOptions']->search->searchItemsPerPage)) ? $GLOBALS['aitThemeOptions']->search->searchItemsPerPage : 10;
 			$query->set('posts_per_page',$num);
 
-			// filter only items by geolocation
-			if(isset($_GET['geo'])){
-				$category = $_GET['categories'];
-				$location = $_GET['locations'];
-				$params = array(
-					'post_type'			=> 'ait-dir-item',
-					'nopaging'			=>	true,
-					'post_status'		=> 'publish'
-				);
-				$taxquery = array();
-				$taxquery['relation'] = 'AND';
-				if($category != 0){
-					$taxquery[] = array(
-						'taxonomy' => 'ait-dir-item-category',
-						'field' => 'id',
-						'terms' => $category,
-						'include_children' => true
-					);
-				}
-				if($location != 0){
-					$taxquery[] = array(
-						'taxonomy' => 'ait-dir-item-location',
-						'field' => 'id',
-						'terms' => $location,
-						'include_children' => true
-					);
-				}
-				if($category != 0 || $location != 0){
-					$params['tax_query'] = $taxquery;
-				}
-				if($query->get('s') != ''){
-					$params['s'] = $query->get('s');
-				}
-				$itemsQuery = new WP_Query();
-				$items = $itemsQuery->query($params);
-				$notIn = array();
-				// add item details
-				foreach ($items as $key => $item) {
-					// options
-					$item->optionsDir = get_post_meta($item->ID, '_ait-dir-item', true);
-					// filter radius
-					if(!isPointInRadius(intval($_GET['geo-radius']), floatval($_GET['geo-lat']), floatval($_GET['geo-lng']), $item->optionsDir['gpsLatitude'], $item->optionsDir['gpsLongitude'])){
-						$notIn[] = $item->ID;
-					}
-				}
-				// filter
-				$query->set('post__not_in',$notIn);
-			}
+			
 		}
 
 		// pagination
@@ -100,9 +53,11 @@ function aitDirMainQuery($query) {
 				$num = (isset($aitThemeOptions->directory->locationItemsPerPage)) ? $aitThemeOptions->directory->locationItemsPerPage : 10;
 				$query->set('posts_per_page',$num);
 			}
+		
 		}
 
 	}
+
 	return $query;
 }
 
@@ -118,8 +73,8 @@ function getItems($category = 0, $location = 0, $search = '', $radius = array())
 
 	$params = array(
 		'post_type'			=> 'ait-dir-item',
-		'nopaging'			=>	true,
-		'post_status'		=> 'publish'
+		// 'nopaging'			=>	true,
+		'post_status'		=> 'publish',
 	);
 
 	$taxquery = array();
@@ -148,8 +103,13 @@ function getItems($category = 0, $location = 0, $search = '', $radius = array())
 		$params['s'] = $search;
 	}
 
-	$itemsQuery = new WP_Query();
-	$items = $itemsQuery->query($params);
+	// $itemsQuery = new WP_Query();
+	// $params['posts_per_page'] = 1;
+	$params['paged'] = intval($_GET['paged']) ? intval($_GET['paged']) : 1;
+	
+	// $itemsQuery->set('posts_per_page', 1);
+
+	$items = $GLOBALS['wp_query']->query($params);
 
 	// add item details
 	foreach ($items as $key => $item) {

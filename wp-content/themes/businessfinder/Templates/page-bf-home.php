@@ -32,7 +32,7 @@
 								{var $j++}
 
 								{if $i ==1 }<tr>{/if}
-								<td><div><a class="cate cate-{$sub_category->term_id}" href="{$sub_categoty->link}"><span>{$sub_category->name}</span></a></div></td>
+								<td><div><a class="cate cate-{$sub_category->term_id}" href="{$sub_category->link}"><span>{$sub_category->name}</span></a></div></td>
 								{if $i%4 == 0 or $total == $j}</tr>{/if}
 								{if $i%4 == 0}
 									{var $i = 0}

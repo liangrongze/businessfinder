@@ -147,7 +147,7 @@
 					 {var $name='gallery'.$i}
 					 {if $options[$name] != ''}
 	                     <a rel="caroufredsel" class="fancybox-media Image" href="{$options[$name]}">
-	                         <img src="{thumbnailResize $options[$name], w => 112, h => 110}"  class="left" alt="Adria Bar Grill Breakfast" />
+	                         <img src="{thumbnailResize $options[$name], w => 160, h => 130}"  class="left" alt="" />
 	                     </a>
 					 {/if}
 					{/for}

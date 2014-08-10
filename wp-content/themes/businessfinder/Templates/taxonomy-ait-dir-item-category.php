@@ -258,6 +258,9 @@
 			{else}
 			<div class="item-empty">暂没商家，请重新选择。</div>
 			{/if}
+			<nav class="paginate-links">
+				{paginateLinks true}
+			</nav>
 		</div>
 		<div class="list-banner">
 			{dynamicSidebar sidebar-item}

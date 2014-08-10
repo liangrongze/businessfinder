@@ -3,15 +3,26 @@
 $term = $GLOBALS['wp_query']->queried_object;
 $latteParams['curent_category'] = $term->term_id;
 
-$categories = intval($_GET['ait-dir-item-category']) ? intval($_GET['ait-dir-item-category']) : $term->term_id;
+$query_categories = intval($_GET['ait-dir-item-category']) ? intval($_GET['ait-dir-item-category']) : $term->term_id;
 
 // If is child category ,term must be parent category
 if( $term->parent != 0)
 	$term = get_term_by('id',$term->parent, 'ait-dir-item-category');
 $subcategories =  get_terms( 'ait-dir-item-category', array('parent' => intval($term->term_id), 'hide_empty' => false) );
 
+$sublocations = get_terms( 'ait-dir-item-location', array('number' => 999999999999999 ,'hide_empty' => false) );
+$hLocations = array();
+aitSortTermsHierarchicaly($sublocations, $hLocations);
+$latteParams['location'] = $_GET['locations'];
 
-$items = getItems($categories,intval($_GET['locations']));
+$categories = get_terms('ait-dir-item-category', array(
+	'hide_empty'		=> false,
+	'orderby'			=> 'id',
+	'parent' => 0
+));
+
+
+$items = getItems($query_categories,intval($_GET['locations']));
 
 if (empty($items)) 
 	$latteParams['dirSearchNotFound'] = true;
@@ -38,16 +49,6 @@ $latteParams['subcategories'] = $subcategories;
 $latteParams['items'] = $items;
 $latteParams['isDirTaxonomy'] = true;
 
-$sublocations = get_terms( 'ait-dir-item-location', array('number' => 999999999999999 ,'hide_empty' => false) );
-$hLocations = array();
-aitSortTermsHierarchicaly($sublocations, $hLocations);
-$latteParams['location'] = $_GET['locations'];
-
-$categories = get_terms('ait-dir-item-category', array(
-	'hide_empty'		=> false,
-	'orderby'			=> 'id',
-	'parent' => 0
-));
 
 foreach($categories as $category){
 	$category->link = get_term_link(intval($category->term_id), 'ait-dir-item-category');

@@ -47,7 +47,7 @@ foreach($sub_categories AS $sub_category){
 	
 	$sub_category->icon = getRealThumbnailUrl(getCategoryMeta("icon", intval($sub_category->term_id)));
 	$sub_category->icon_hover = getRealThumbnailUrl(getCategoryMeta("hover", intval($sub_category->term_id)));
-	$sub_category->link = get_term_link(intval($category->term_id), 'ait-dir-item-category');
+	$sub_category->link = get_term_link(intval($sub_category->term_id), 'ait-dir-item-category');
 	foreach($temp AS $key=>$_t){
 		if($key ==  $sub_category->parent){
 			if( !array_key_exists($sub_category->term_id, $temp[$sub_category->parent]['childs']) ){
