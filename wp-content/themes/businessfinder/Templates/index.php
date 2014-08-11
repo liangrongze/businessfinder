@@ -2,9 +2,15 @@
 
 {block content}
 <!-- Begin .section-category-holder -->
-<div class="section-category-holder">
+<div class="section-search-holder">
 	<div class="wrapper">
-		Newest items
+		<div class="ptitle">
+			{if $page == 'index'}
+			共找到匹配{if $s} 关键词 <span class="bold">{$s} </span> {/if} {if $location} 地区 <span class="bold">{$location->name} </span> {/if}的结果{$postsTotal}项
+			{else}
+			最近更新{$postsTotal}项
+			{/if}
+		</div>
 	</div>
 </div>
 <!-- End .section-category-holder -->
@@ -70,9 +76,13 @@
 					</div>
 			</div>
 			{/foreach}
+			<nav class="paginate-links">
+				{paginateLinks true}
+			</nav>
 		</div>
+		
 		<div class="list-banner">
-			
+			{dynamicSidebar sidebar-item}
 		</div>
 	</div>
 </div>

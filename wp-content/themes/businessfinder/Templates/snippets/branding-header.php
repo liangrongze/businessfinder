@@ -45,19 +45,18 @@
 	data-interactive="{ifset $themeOptions->search->enableInteractiveSearch}yes{else}no{/ifset}">
 		<div class="wrapper">
 			<form action="{$homeUrl}" id="dir-search-form" method="get" class="dir-searchform">
-				<input type="hidden" name="ait-dir-item-category" value="">
 				<div class="first-row clearfix">
 					<div class="basic-search-form clearfix">
 						<div id="dir-search-inputs">
 							<div id="dir-holder">
 								<div class="dir-holder-wrap">
-								<input type="text" name="s" id="dir-searchinput-text" placeholder="{__ '本地生意类型或名字'}" class="dir-searchinput"{ifset $isDirSearch} value="{$site->searchQuery}"{/ifset}>
+								<input type="text" name="s" id="dir-searchinput-text" placeholder="{__ '本地生意类型或名字'}" class="dir-searchinput"{ifset $s} value="{$s}"{/ifset}>
 								<div class="reset-ajax"></div>
 
 								</div>
 							</div>
 
-							<input type="text" id="dir-searchinput-location" placeholder="{__ '所在地区／邮政编码'}">
+							<input type="text" id="dir-searchinput-location" placeholder="{__ '所在地区／邮政编码'}" {ifset $location} value="{$location->name}"{/ifset}>
 							<input type="text" name="locations" id="dir-searchinput-location-id" value="0" style="display: none;">
 
 						</div>
@@ -66,7 +65,6 @@
 							<input type="submit" value="{__ '现在寻找'}" class="dir-searchsubmit">
 						</div>
 					</div>
-					<input type="hidden" name="dir-search" value="yes" />
 				</div>
 
 				<div class="advanced-search">

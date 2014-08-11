@@ -775,7 +775,7 @@ ul.item-image-gallery, .jcarousel-clip-horizontal   { overflow: hidden; white-sp
     PAGINATION
    ======================================================= */
 
-.paginate-links                                     { margin: 20px 0 40px; text-align: center; }
+.paginate-links                                     { margin: 20px 0 0; text-align: center; }
 .paginate-links .page-nav                           { display: inline-block; }
 .paginate-links a:hover                             { color: #fff; }
 .paginate-links .page-numbers                       { .secondColorButton; display: inline-block; color: #fff; .transition(background, 1s); padding: 5px 10px 5px 10px;background: #0b7cbf;border-bottom: 3px solid #0b7cbf !important;}
@@ -1626,6 +1626,10 @@ a.button.add-item                           { float: none; display: inline-block
 .section-ad-contact .flexslider .slides{position:relative;}
 .section-ad-contact .flexslider .slides .top {position:absolute;top:0;height: 10px;background: #F52E2E;width:100%;z-index: 10000;} 
 
+.section-search-holder{}
+.section-search-holder .ptitle{padding: 20px 0px 0px 0px;color: #fff;font-size: 16px;}
+.section-search-holder .ptitle .bold{color:red;font-weight:bold;}
+
 .section-ad-contact {margin-top:20px;}
 .section-ad-contact .contact-form h3,.section-ad-contact .ad h3 {color:#fff;font-size:25px;}
 
@@ -1854,6 +1858,7 @@ div.wpcf7{margin-bottom:0px;}
 .section-gallery .carousel-holder .carousel a:after {content: " ";position: absolute;background: url(design/img/eatdrink.png);width: 112px;height: 110px;top: 0;left: 0;border-radius: 10px;overflow: hidden;opacity: 0.4;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
 .section-gallery .m-slider{position:relative;display:none;}
 .section-gallery .flex-direction-nav a{opacity:1;}
+.
 /*Footer*/
 #colophon{}
 #site-generator{background: #000;border-radius: 15px 15px 0px 0px;}
@@ -1917,6 +1922,7 @@ div.wpcf7{margin-bottom:0px;}
 	.sub-category-holder .flex-direction-nav a{/*background: url(design/img/bg_direction_nav.png) no-repeat 0 0;*/}
 	.sub-category-holder .flex-direction-nav a.flex-next{background: url('design/img/icon_arrow_right.png') -1px 0px no-repeat transparent;background-size: 30px 30px;}
 	.sub-category-holder .flex-direction-nav a.flex-prev{background: url('design/img/icon_arrow_left.png') -2px 0px no-repeat transparent;background-size: 30px 30px;}
+	.section-search-holder .ptitle{padding-left:10px;}
 	
 	.section-newest{margin: 20px 10px 10px 10px;display:block;}
 	.section-newest a,.section-newest h3,.section-newest h4,.section-newest span{color:#00a4ff}
@@ -1962,9 +1968,9 @@ div.wpcf7{margin-bottom:0px;}
 	.section-list .wrapper .list .bs-item .item-detail-header .detail h3{font-size:15px;}
 	.section-list .wrapper .list .bs-item .item-detail-header .detail h4{font-size:13px;}
 	.section-list .wrapper .list .bs-item .desc-and-contact .desc{display:none;}
-	.section-list .bs-item li{background:url('design/img/cate-food-list-icon.png') no-repeat transparent;padding-left: 30px;line-height: 25px;font-size: 13px;overflow: hidden;text-align:left;}
-	.section-list .bs-item .item-detail-addr{background-position: 0px -35px;}
-	.section-list .bs-item .item-detail-tel{background-position: 0px -55px;}
+	.section-list .bs-item li{padding-left: 30px;line-height: 25px;font-size: 13px;overflow: hidden;text-align:left;}
+	.section-list .bs-item .item-detail-addr{background: url('design/img/icon_map_pin_50.png') -9px -6px no-repeat;background-size: 45px 40px;}
+	.section-list .bs-item .item-detail-tel{background: url('design/img/icon_tel_50.png') 1px -1px no-repeat;background-size: 26px 26px;}
 	.section-list .wrapper .list .bs-item .phone-email {display:block;border-top:1px solid #eee;margin-top:5px;}
 	.section-list .wrapper .list .bs-item .phone-email li{float:left;background: 0;width: 49%;padding-left: 0;text-align: center;border-right:1px solid #eee;}
 	.section-list .wrapper .list .bs-item .phone-email li:last-child{border-right:0;}
