@@ -3,7 +3,15 @@
 $term = $GLOBALS['wp_query']->queried_object;
 $latteParams['curent_category'] = $term->term_id;
 
-$query_categories = intval($_GET['ait-dir-item-category']) ? intval($_GET['ait-dir-item-category']) : $term->term_id;
+$query_categories = intval($_GET['ait-dir-item-category']) ? array(intval($_GET['ait-dir-item-category'])) : array($term->term_id);
+
+if( $_GET['category'] ){
+	$query_categories = array();
+	foreach($_GET['category'] AS $_t){
+		$query_categories[] = $_t;
+	}
+}
+
 
 // If is child category ,term must be parent category
 if( $term->parent != 0)
@@ -21,8 +29,16 @@ $categories = get_terms('ait-dir-item-category', array(
 	'parent' => 0
 ));
 
+$query_location = intval($_GET['locations']) ? array(intval($_GET['locations'])) : array();
 
-$items = getItems($query_categories,intval($_GET['locations']));
+if( $_GET['location'] ){
+	$query_location = array();
+	foreach($_GET['location'] AS $_t){
+		$query_location[] = $_t;
+	}
+}
+
+$items = getItems($query_categories,$query_location);
 
 if (empty($items)) 
 	$latteParams['dirSearchNotFound'] = true;
@@ -30,8 +46,12 @@ if (empty($items))
 // add subcategory links
 foreach ($subcategories as $category) {
 	$category->link = get_term_link(intval($category->term_id), 'ait-dir-item-category');
+	$category->count = countItems($category->term_id);
 }
 
+foreach($hLocations as $location){
+	$location->count = countItems($latteParams['curent_category'],$location->term_id);
+}
 // add items details
 foreach ($items as $item) {
 	$item->link = get_permalink($item->ID);

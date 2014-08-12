@@ -18,7 +18,7 @@
 				<h1>{!$term->name}</h1>
 			</div>
 			<div class="category-form">
-				<form action="{$term->link}">
+				<form action="{$homeUrl}">
 				<div class="item-search right">
 					<input type="submit" value="{__ '搜索'}" class="item-searchsubmit">
 				</div>
@@ -41,7 +41,7 @@
 				</div>
 				<div class="categoty-options right">
 					<select id="ait-dir-item-category" name="ait-dir-item-category">
-						<option value="{$term->slug}">按饭店类型搜索</option>
+						<option value="{$term->slug}">按类型搜索</option>
 						{if count($subcategories) > 0}
 						{foreach $subcategories as $category}
 						{var $selected = $curent_category == $category->term_id ? 'selected' : ''}
@@ -55,140 +55,58 @@
 		</div>
 		<!-- Begin .category-form-holder -->
 		<div class="category-food-mobile-holder">
+			<form action="{$homeUrl}" method="">
+				<input type="hidden" name="ait-dir-item-category" value="{$term->slug}">
+
 			<div class="holder-title">
 				<div><span>精确搜索</span></div>
 			</div>
+			{var $hideFlag = 5}
+			{var $i = 1}
+			{var $j = 1}
 			<div class="holder-detail">
 				<a class="close">close</a>
 				<div class="action-title"><span>搜索筛选标签</span><a href="">清除搜索选项</a></div>
-				<div class="action clearfix"><span class="t">按照</span><select><option>相关联项</option><option>相关联项</option></select><a href="">搜索</a></div>
+				<div class="action clearfix"><span class="t">按照</span><select><option>相关联项</option><option>相关联项</option></select><input class="b-submit" type="submit" value="搜索"></div>
 				<div class="filter clearfix">
-					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
+					<div class="action-title"><span>分类搜索</span><a href="">清除搜索选项</a></div>
 					<ul>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
+						{foreach $subcategories as $c}
+						{if $c->count > 0}
+						<li {if $i>$hideFlag } class="hide" {/if} >
+							<span class="f-input"><input type="checkbox" name="category[]" value="{$c->term_id}"><label></label></span> 
+							<span class="f-value">{$c->name}</span>
+							<span class="f-num">{$c->count}</span>
 						</li>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
+						{var $i++}
+						{/if}
+						{/foreach}
 					</ul>
+					{if $i>$hideFlag }
 					<div class="expand clearfix">更多选项</div>
+					{/if}
 				</div>
 				<div class="filter clearfix">
 					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
 					<ul>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
+						{foreach $hLocations as $location}
+						{if $location->count>0}
+						<li  {if $j>$hideFlag } class="hide" {/if}>
+							<span class="f-input"><input type="checkbox" name="location[]" value="{$location->term_id}"><label></label></span> 
+							<span class="f-value">{$location->name}</span>
+							<span class="f-num">{$location->count}</span>
 						</li>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
+						{var $j++}
+						{/if}
+						{/foreach}
 					</ul>
+					{if $i>$hideFlag }
 					<div class="expand clearfix">更多选项</div>
+					{/if}
 				</div>
-				<div class="filter clearfix">
-					<div class="action-title"><span>地点区域</span><a href="">清除搜索选项</a></div>
-					<ul>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li><li>
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-						<li class="collapse">
-							<span class="f-input"><input type="checkbox"><label></label></span> 
-							<span class="f-value">Sydney</span>
-							<span class="f-num">150</span>
-						</li>
-					</ul>
-					<div class="expand clearfix">更多选项</div>
 				</div>
 			</div>
+		</form>
 		</div>
 	</div>
 </div>

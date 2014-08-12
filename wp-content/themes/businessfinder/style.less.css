@@ -1729,7 +1729,7 @@ div.wpcf7{margin-bottom:0px;}
 .section-category-form .wrapper .categoty-food-form-holder .category-form .item-search input:hover{background:#0b7ca0;}
 
 .category-food-mobile-holder{display:none;margin: 0 10px;}
-.category-food-mobile-holder.active{position:fixed;top:169px;z-index:1000;overflow-y:auto;}
+.category-food-mobile-holder.active{position:fixed;top:0;z-index:1000;overflow-y:auto;height:100%;}
 .category-food-mobile-holder .holder-title{background:#fff;padding: 10px;border-radius: 10px;text-align: center;cursor:pointer;}
 .category-food-mobile-holder .holder-title.active{border-radius:10px 10px 0px 0px;}
 .category-food-mobile-holder .holder-title span{position:relative;color:#ffbc00;}
@@ -1750,6 +1750,7 @@ div.wpcf7{margin-bottom:0px;}
 .category-food-mobile-holder .holder-detail  .action a{float:right;color: #ffbc00;padding: 16px 10px 10px 10px;}
 .category-food-mobile-holder .holder-detail .filter{color: #ffbc00;font-size: 14px;}
 .category-food-mobile-holder .holder-detail .filter ul{padding: 10px 0;color:#838383;}
+.category-food-mobile-holder .holder-detail .filter li.hide{display:none;}
 .category-food-mobile-holder .holder-detail .filter li{float: left;width: 100%;padding: 10px 0px;cursor: pointer;}
 .category-food-mobile-holder .holder-detail .filter li .f-input{float: left;margin-right: 10px;position:relative;}
 .category-food-mobile-holder .holder-detail .filter li .f-input.active label:after{opacity:1;}
@@ -1760,7 +1761,8 @@ div.wpcf7{margin-bottom:0px;}
 .category-food-mobile-holder .holder-detail .filter .collapse{display:none;}
 .category-food-mobile-holder .holder-detail .filter .expand{padding:10px 0 10px 30px;position: relative;clear:both;color:#838383;cursor:pointer;}
 .category-food-mobile-holder .holder-detail .filter .expand:hover{color:#ffbc00;}
-.category-food-mobile-holder .holder-detail .filter .expand:after{content: " ";height: 24px;width: 30px;position: absolute;top: 5px;left: 87px;background: url(design/img/cate-food-list-icon) 0 -90px;}
+.category-food-mobile-holder .holder-detail .filter .expand:after{content: " ";height: 24px;width: 30px;position: absolute;top: 5px;left: 87px;background: url(design/img/cate-food-list-icon.png) 0 -90px;}
+.category-food-mobile-holder .holder-detail .filter .up:after{background: url(design/img/arrow-up.png) no-repeat 0 5px;}
 
 .section-list{margin-bottom:20px;}
 .section-list .wrapper{}
@@ -1975,7 +1977,7 @@ div.wpcf7{margin-bottom:0px;}
 	.section-list .wrapper .list .bs-item .phone-email li{float:left;background: 0;width: 49%;padding-left: 0;text-align: center;border-right:1px solid #eee;}
 	.section-list .wrapper .list .bs-item .phone-email li:last-child{border-right:0;}
 	.section-list .wrapper .list .bs-item .phone-email li a{font-size:15px;}
-	
+	.b-submit{border: 0;background: #fff;color: #ffbc00;padding: 20px 0 0px 20px;}
 
 	/* Singe product*/
 	.section-breadcrumb-holder,

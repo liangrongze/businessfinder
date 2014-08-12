@@ -104,13 +104,13 @@ function countItems($category = 0, $location = 0, $search = '') {
 		$params['s'] = $search;
 	}
 
-	// $itemsQuery = new WP_Query();
+	$itemsQuery = new WP_Query();
 	// $params['posts_per_page'] = 1;
 	$params['paged'] = intval($_GET['paged']) ? intval($_GET['paged']) : 1;
 	
 	// $itemsQuery->set('posts_per_page', 1);
 
-	$items = $GLOBALS['wp_query']->query($params);
+	$items = $itemsQuery->query($params);
 
 
 	return count($items);
@@ -124,7 +124,7 @@ function countItems($category = 0, $location = 0, $search = '') {
  * @param  array   $radius   (radius in km, lat, lon)
  * @return array             items
  */
-function getItems($category = 0, $location = 0, $search = '', $radius = array()) {
+function getItems($category = array(), $location = array(), $search = '', $radius = array()) {
 
 	$params = array(
 		'post_type'			=> 'ait-dir-item',
@@ -138,11 +138,19 @@ function getItems($category = 0, $location = 0, $search = '', $radius = array())
 		$taxquery[] = array(
 			'taxonomy' => 'ait-dir-item-category',
 			'field' => 'id',
-			'terms' => $category,
+			'terms' => $category ? $category : 0,
 			'include_children' => true
 		);
+		
+		/*$taxquery[] = array(
+			'taxonomy' => 'ait-dir-item-category',
+			'field' => 'id',
+			'terms' => $category,
+			'include_children' => true
+		);*/
 	}
-	if($location != 0){
+
+	if($location){
 		$taxquery[] = array(
 			'taxonomy' => 'ait-dir-item-location',
 			'field' => 'id',

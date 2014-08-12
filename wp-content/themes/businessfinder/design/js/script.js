@@ -82,16 +82,18 @@ function createSearchDropdowns () {
 		// checkbox action
 		checkboxAction();
 		
-		$j('.filter .action-title a').click(function (e){
+		$j('.action-title a').click(function (e){
 			e.preventDefault();
 			var target = $j(this).parent().parent().find('ul');
 			clearChceckAction(target);
 		})
 			
 		$j('.filter .expand').click(function (){
-			if( $j(this).parent().find('.collapse').is(':visible') ){
-				$j(this).parent().find('.collapse').hide();	
+			if( $j(this).parent().find('.hide').is(':visible') ){
+				$j(this).parent().find('.hide').hide();	
+				$j(this).removeClass('up');
 				$j(this).html('更多选项');
+				
 				/*
 				$j(this).parent().parent().find('.collapse').each(function(){
 					if( $j(this).find('input').is(':checked') ){
@@ -101,7 +103,8 @@ function createSearchDropdowns () {
 				});		
 				*/
 			}else{
-				$j(this).parent().find('.collapse').show();	
+				$j(this).parent().find('.hide').show();	
+				$j(this).addClass('up');
 				$j(this).html('收起');
 			}
 		});
