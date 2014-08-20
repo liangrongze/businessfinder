@@ -807,8 +807,8 @@ function render_sub_category_style($categories = array()){
 		if($category->parent != 0){
 			$icon = getRealThumbnailUrl(getCategoryMeta("icon", intval($category->term_id)));
 			$icon_hover = getRealThumbnailUrl(getCategoryMeta("hover", intval($category->term_id)));
-			$style .= ".sub-cate-list .cate-".$category->term_id."{background:url('".$icon."') 10px 10px no-repeat;}";
-			$style .= ".sub-cate-list .cate-".$category->term_id.":hover{background:url('".$icon_hover."') 10px 10px no-repeat;}";
+			$style .= ".sub-cate-list .cate-".$category->term_id."{background:url('".$icon."') center no-repeat;}";
+			$style .= ".sub-cate-list .cate-".$category->term_id.":hover{background:url('".$icon_hover."') center no-repeat;}";
 		}
 	}
 	
@@ -819,8 +819,8 @@ function render_sub_category_style($categories = array()){
 		if($category->parent != 0){
 			$icon = getRealThumbnailUrl(getCategoryMeta("icon", intval($category->term_id)));
 			$icon_hover = getRealThumbnailUrl(getCategoryMeta("hover", intval($category->term_id)));
-			$style .= ".sub-cate-list .cate-".$category->term_id."{background:url('".$icon."') -14px 13px no-repeat;background-size: 90px 78px;}";
-			$style .= ".sub-cate-list .cate-".$category->term_id.":hover{background:url('".$icon_hover."') -14px 13px no-repeat;background-size: 90px 78px;}";
+			$style .= ".sub-cate-list .cate-".$category->term_id."{background:url('".$icon."') center no-repeat;background-size: 90px 78px;}";
+			$style .= ".sub-cate-list .cate-".$category->term_id.":hover{background:url('".$icon_hover."') center no-repeat;background-size: 90px 78px;}";
 		}
 	}
 	$style .= "}";
