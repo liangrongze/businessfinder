@@ -7,6 +7,14 @@ engName:
 address:
 	label: Address
 	type: textarea
+gpsLatitude:
+	label: GPS Latitude
+	type: text
+	default: 0
+gpsLongitude:
+	label: GPS Longitude
+	type: text
+	default: 0
 telephone:
 	label: Telephone
 	type: text
