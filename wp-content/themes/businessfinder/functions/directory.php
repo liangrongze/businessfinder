@@ -567,16 +567,16 @@ function getItemPackageClass( $authorId ) {
 	}
 }
 
-// Get manually excerpt or automatic excerpt for wp post
+// Get manually excerpt or automatic excerpt for wp post, remove all html tags
 function aitGetPostExcerpt($excerpt, $content) {
 	$newExcerpt = '';
 	$trimExcerpt = trim($excerpt);
 	if(empty($trimExcerpt)){
-		$exc = substr(strip_shortcodes($content), 0, 100);
+		$exc = substr(strip_shortcodes(strip_tags($content)), 0, 100);
 		$pos = strrpos($exc, " ");
 		$newExcerpt = substr($exc, 0, ($pos ? $pos : -1)) . "...";
 	} else {
-		$exc = substr(strip_shortcodes($excerpt), 0, 100);
+		$exc = substr(strip_shortcodes(strip_tags($excerpt)), 0, 100);
 		$pos = strrpos($exc, " ");
 		$newExcerpt = substr($exc, 0, ($pos ? $pos : -1)) . "...";
 	}
