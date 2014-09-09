@@ -52,8 +52,8 @@
 <div class="business-detail-part-1">
 	<div class="wrapper">
 		<h1>{$post->title}</h1>
-		<div class="addthis-toolbox">
-		    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+		<div class="addthis-toolbox addthis_default_style addthis_32x32_style">
+		    <a class="addthis_button_google_plusone"></a>
 			<a class="addthis_button_pinterest_pinit"></a>
 			<a class="addthis_button_tweet"></a>
 			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -75,9 +75,8 @@
  				            <dd class="website"><a href="{$options['web']}" target="_blank">{$options['web']}</a></dd>
 		        </dl>
 					<div class="sl">
-						<a href="">分享</a>
-						<a href="">商家名片</a>
-						<a href="">其他信息</a>
+						<a id="share" href="#">分享</a>
+						<a id="business-card" href="#business-card-container">商家名片</a>
 					</div>
 			</div>
 		</div>
@@ -89,8 +88,58 @@
 			</article>
 		</div>
 	</div>
+	<div class="share-bg" style="display:none;"></div>
+	<div style="display:none;" id="share-container">
+		<div>分享到</div> <a href="#" class="share-close"></a>
+			<div class="addthis_sharing_toolbox"></div>
+	</div>
+	<div id="business-card-container" style="display:none;">
+		<div>商家名片</div> <a href="#" class="card-close"></a>
+		{if $options['businessCard']}
+		<img src="{$options['businessCard']}">
+		{else}
+		<img src="wp-content/themes/businessfinder/design/img/card-default.png">
+		{/if}
+	</div>
 </div>
 <!-- start .business-detail-part-2 -->
+
+{if $options['galleryEnable'] == true}
+<div class="section-gallery">
+	<div class="wrapper">
+	  <h3>图片</h3>
+	         <div class="carousel-holder">
+	             <a class="prev" href="#">&nbsp;</a>
+	             <div class="carousel">
+					 {for $i=1; $i<21; $i++}
+					 {var $name='gallery'.$i}
+					 {if $options[$name] != ''}
+	                     <a rel="caroufredsel" class="fancybox-media Image" href="{$options[$name]}">
+	                         <img src="{thumbnailResize $options[$name], w => 160, h => 130}"  class="left" alt="" />
+	                     </a>
+					 {/if}
+					{/for}
+	             </div>
+	             <div class="clearfix"></div>
+	             <a class="next" href="#">&nbsp;</a>
+	         </div>
+			 <div class="flex-container m-slider">
+				 <div class="flexslider span12">
+					 <ul class="slides">
+						 <li><img src="wp-content/themes/businessfinder/design/img/g-1.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-2.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-3.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-4.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-5.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-6.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-7.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+						<li><img src="wp-content/themes/businessfinder/design/img/g-8.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
+					 </ul>
+				 </div>
+			 </div>
+	</div>	
+</div>
+{/if}
 
 <!-- start .business-related -->
 {if isset($options['specialActive']) or isset($options['specialActive']) or isset($options['specialActive'])}
@@ -134,44 +183,8 @@
         </div>
     </div>	    
 </div>
+{/if}
 <!-- End .business-related -->
-{/if}
-{if $options['galleryEnable'] == true}
-<div class="section-gallery">
-	<div class="wrapper">
-	  <h3>图片</h3>
-	         <div class="carousel-holder">
-	             <a class="prev" href="#">&nbsp;</a>
-	             <div class="carousel">
-					 {for $i=1; $i<21; $i++}
-					 {var $name='gallery'.$i}
-					 {if $options[$name] != ''}
-	                     <a rel="caroufredsel" class="fancybox-media Image" href="{$options[$name]}">
-	                         <img src="{thumbnailResize $options[$name], w => 160, h => 130}"  class="left" alt="" />
-	                     </a>
-					 {/if}
-					{/for}
-	             </div>
-	             <div class="clearfix"></div>
-	             <a class="next" href="#">&nbsp;</a>
-	         </div>
-			 <div class="flex-container m-slider">
-				 <div class="flexslider span12">
-					 <ul class="slides">
-						 <li><img src="wp-content/themes/businessfinder/design/img/g-1.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-2.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-3.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-4.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-5.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-6.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-7.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-						<li><img src="wp-content/themes/businessfinder/design/img/g-8.jpg" class="attachment-slider-double wp-post-image" alt=""></li>
-					 </ul>
-				 </div>
-			 </div>
-	</div>	
-</div>
-{/if}
 
 {include 'single-js.php'}
 {/block}

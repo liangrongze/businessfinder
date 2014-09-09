@@ -1,3 +1,9 @@
+"Business card" : section
+businessCard:
+	label: Image
+	type: image-url
+
+
 "Special Offer" : section
 specialActive:
 	label: Active

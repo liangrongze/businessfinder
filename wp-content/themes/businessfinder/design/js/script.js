@@ -54,7 +54,36 @@ $j(document).ready(function() {
     $j('input, textarea').simplePlaceholder();
 
     langButtonClick();
+	
+	$j("#share").click(function (e){
+		e.preventDefault();
+		$j('#share-container').show();
+		var left = ( $j(document).width() - 500 ) / 2; 
+		$j('#share-container').css('left',left);
+		$j('.share-bg').show();
+	});
+	
+	$j('.share-close').click(function (e){
+		e.preventDefault();
+		$j('#share-container').hide();
+		$j('.share-bg').hide();
+	})
 
+	$j("#business-card").click(function (e){
+		e.preventDefault();
+		$j('#business-card-container').show();
+		var left = ( $j(document).width() - 500 ) / 2; 
+		$j('#business-card-container').css('left',left);
+		$j('.share-bg').show();
+	});
+	
+	$j('.card-close').click(function (e){
+		e.preventDefault();
+		$j('#business-card-container').hide();
+		
+		$j('.share-bg').hide();
+	})
+	
 });
 
 function createSearchDropdowns () {

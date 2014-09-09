@@ -48,39 +48,6 @@
 				// catInputID = $( "#dir-searchinput-category-id" ),
 			var	locInput = $( "#dir-searchinput-location" ),
 				locInputID = $( "#dir-searchinput-location-id" );
-				/*
-			catInput.autocomplete({
-				minLength: 0,
-				source: categories,
-				focus: function( event, ui ) {
-					var val = ui.item.label.replace(/&amp;/g, "&");
-						val = val.replace(/&nbsp;/g, " ");
-					catInput.val( val );
-					return false;
-				},
-				select: function( event, ui ) {
-					var val = ui.item.label.replace(/&amp;/g, "&");
-						val = val.replace(/&nbsp;/g, " ");
-					catInput.val( val );
-					catInputID.val( ui.item.value );
-					return false;
-				}
-			}).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-				return $( "<li>" )
-					.data( "item.autocomplete", item )
-					.append( "<a>" + item.label + "</a>" )
-					.appendTo( ul );
-			};
-				
-			var catList = catInput.autocomplete( "widget" );
-			catList.niceScroll({ autohidemode: false });
-
-			catInput.click(function(){
-				catInput.val('');
-				catInputID.val('0');
-				catInput.autocomplete( "search", "" );
-			});
-*/
 			locInput.autocomplete({
 				minLength: 0,
 				source: locations,
@@ -136,7 +103,6 @@
 
 		});
 		</script>
-
 	</head>
 
 	<body <?php body_class('ait-businessfinder'); ?> data-themeurl="{$themeUrl}">

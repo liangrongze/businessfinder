@@ -1802,7 +1802,7 @@ div.wpcf7{margin-bottom:0px;}
 .business-detail-part-1{}
 .business-detail-part-1 .wrapper{background: #212121;position:relative;padding-top: 20px;padding-bottom: 20px;border-radius: 0 0 15px 15px;}
 .business-detail-part-1 h1{color:#0b7cbf;margin-left: 20px;font-family: pns-bold;font-size: 30px;}
-.business-detail-part-1 .addthis-toolbox{position:absolute;top:20px;right:10px;width:90%;}
+.business-detail-part-1 .addthis-toolbox{position:absolute;top:30px;right:10px;width:90%;}
 .business-detail-part-1 .addthis-toolbox a{float:right;}
 
 .business-detail-part-2 {margin-top: 20px;}
@@ -1811,22 +1811,26 @@ div.wpcf7{margin-bottom:0px;}
 #map-canvas {height: 240px; width: 68%; margin: 0;border-radius: 15px 0 0 0;}
 .business-detail-part-2 .details{ width: 32%;height: 200px;}
 .business-detail-part-2 .details dd{ padding: 0 20px;}
-.business-detail-part-2 .details .address{ font-family: pns-regular;color: #8c8c8c;margin: 20px 0;font-size: 12px;line-height: 16px;}
+.business-detail-part-2 .details .address{ font-family: pns-regular;color: #8c8c8c;margin: 20px 0;font-size: 16px;line-height: 20px;}
 .business-detail-part-2 .details .website{ font: 13px/13px pns-regular;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .business-detail-part-2 .details .social-media{}
 .business-detail-part-2 .right{width: 20%;height: 200px;}
-.business-detail-part-2 a{text-decoration: underline;color:#fff;font-size:12px;}
+.business-detail-part-2 a{text-decoration: underline;color:#fff;font-size:13px;}
 .business-detail-part-2 .details dl {height:180px;}
 .business-detail-part-2 .details dd {margin-left: 0;margin-bottom: 10px;}
 .business-detail-part-2 .details .sl{}
-.business-detail-part-2 .details .sl a{width: 32.6%;background: #0b7cbf;display: block;float: left;margin-right:1%;text-align:center;padding: 8px 0;}
+.business-detail-part-2 .details .sl a{width: 49.5%;background: #0b7cbf;display: block;float: left;margin-right:1%;text-align:center;padding: 8px 0;}
 .business-detail-part-2 .details .sl a:last-child{margin-right:0;}
 .business-detail-part-2 .m-address{display:none;color: #0b7cbf;padding: 10px 20px;text-align: center;font-size: 15px;font-weight: bold;}
 .business-detail-part-2 .m-tel{display:none;color: #0b7cbf;padding: 20px 20px 0px 10px;clear: both;text-align: center;font-size: 20px;font-weight: bold;}
 .business-detail-part-2 .desc{width:100%;border-radius: 0 0 10px 10px;margin-bottom: 40px;color: #8C8C72;}
-.business-detail-part-2 .desc article{margin: 20px 0;}
-.business-detail-part-2 .desc article p{margin:0px 20px;font-size:16px;}
+.business-detail-part-2 .desc article{margin: 20px 0;padding: 0 20px;}
+.business-detail-part-2 .desc article p{font-size:13px;}
 .business-detail-part-2 .desc aside{width:20%;margin-top: 20px;}
+#share-container, #business-card-container{position: fixed;top: 30%;left: 43%;background-color: white;padding: 10px 20px 20px 20px;width:500px;z-index:100;}
+#share-container .share-close, #business-card-container .card-close{background: url(design/img/prettyPhoto/default/sprite.png) 2px 1px no-repeat;width: 30px;height: 30px;position: absolute;right: 5px;top: 5px;display: block;line-height: 22px;text-indent: -10000px;}
+#share-container .addthis_sharing_toolbox{padding-top: 20px;}
+.share-bg {width: 100%;position: fixed;background-color: #eee;height: 100%;top: 0;opacity: 0.5;}
 
 .section-related {margin-bottom: 20px;margin-top: 20px;}
 .section-related  h3{margin: 0 0 22px 20px;color: #fff;}
@@ -1837,7 +1841,7 @@ div.wpcf7{margin-bottom:0px;}
 .section-related .offers > .offer:before {content: "";background: url(design/img/offer.png);opacity: 0.6;width: 100%;height: 100%;display: block;z-index: 2;border-radius: 10px;overflow: hidden;position: absolute;}
 .section-related .offers > .offer > div {position: absolute;z-index: 2;height: 60px;transition: all 0.2s ease;-webkit-transition: all 0.2s ease;background: #1486ba;top: 0;left: 0;width: 100%;border-radius: 10px 10px 0 0;}
 .section-related .offers > .offer h4 {padding: 18px 39px 18px 20px;z-index: 2;text-transform: uppercase;font-size:15px;color:#fff;}
-.section-related .offers > .offer > div > span {padding: 0 20px 0 20px;display: none;height: 34px;line-height: 1.5;color:#fff;}
+.section-related .offers > .offer > div > span {padding: 0 20px 0 20px;display: none;height: 150px;line-height: 1.5;color:#fff;overflow:hidden;}
 .section-related .offers > .offer > .image {position: absolute;bottom: 0;left: 0;z-index: 1;width: 100%;height: 100%;border-radius: 10px;overflow: hidden;}
 .section-related .offers > .offer > .image > img {position: absolute;bottom: 0;left: 0;border-radius: 10px;overflow: hidden;width:100%;}
 .section-related .offers > .offer:hover, .section-related .offers  > .offer:hover > div {background: #0273a8;border-radius: 10px;}
