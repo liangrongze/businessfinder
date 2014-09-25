@@ -1816,9 +1816,10 @@ div.wpcf7{margin-bottom:0px;}
 .business-detail-part-2 .details .social-media{}
 .business-detail-part-2 .right{width: 20%;height: 200px;}
 .business-detail-part-2 a{text-decoration: underline;color:#fff;font-size:13px;}
-.business-detail-part-2 .details dl {height:180px;}
+.business-detail-part-2 .details dl {height:200px;overflow:hidden;}
 .business-detail-part-2 .details dd {margin-left: 0;margin-bottom: 10px;}
 .business-detail-part-2 .details .sl{}
+	
 .business-detail-part-2 .details .sl a{width: 49.5%;background: #0b7cbf;display: block;float: left;margin-right:1%;text-align:center;padding: 8px 0;}
 .business-detail-part-2 .details .sl a:last-child{margin-right:0;}
 .business-detail-part-2 .m-address{display:none;color: #0b7cbf;padding: 10px 20px;text-align: center;font-size: 15px;font-weight: bold;}
@@ -1832,7 +1833,7 @@ div.wpcf7{margin-bottom:0px;}
 #share-container .addthis_sharing_toolbox{padding-top: 20px;}
 .share-bg {width: 100%;position: fixed;background-color: #eee;height: 100%;top: 0;opacity: 0.5;}
 
-.section-related {margin-bottom: 20px;margin-top: 20px;}
+.section-related {margin-top: 20px;}
 .section-related  h3{margin: 0 0 22px 20px;color: #fff;}
 .section-related .offers {width: 100%;margin-bottom: 20px;margin: auto;}
 
@@ -1848,9 +1849,9 @@ div.wpcf7{margin-bottom:0px;}
 .section-related .offers > .offer:hover > div >span {	display:block;}
 .section-related .offers > .offer:hover > div {height: 100%;}
 
-.section-gallery{	margin-bottom: 20px;}
+.section-gallery{	margin-top: 20px;}
 .section-gallery h3{color: #fff;padding-left:20px;}
-.section-gallery .carousel-holder {width: 865px !important;height: 110px;padding: 0 65px;position: relative;}
+.section-gallery .carousel-holder {width: 865px !important;padding: 0 65px;position: relative;}
 .section-gallery .carousel-holder a {display: block;float: left;position: relative;}
 .section-gallery .carousel-holder .prev, .section-gallery .carousel-holder .next {position: absolute;width: 50px;height: 50px;border-radius: 55px;background: #5a2484;top: 0;right: 0;text-decoration: none;}
 .section-gallery .carousel-holder .prev {transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);-ms-transform: rotate(180deg);left: 0;}
@@ -1861,9 +1862,11 @@ div.wpcf7{margin-bottom:0px;}
 .section-gallery .carousel-holder img {padding: 0;display: block;float: left;border-radius: 10px;width: 160px;height: 130px;}
 .section-gallery .carousel-holder a .play {opacity: 0;width: 106px;height: 104px;border-radius: 10px;position: absolute;top: 0;left: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;border-color: #c25615;}
 .section-gallery .carousel-holder a .play > img {width: 38px;height: 38px;background: #5a2484;border-radius: 19px;position: absolute;top: 50%;left: 50%;margin-top: -19px;margin-left: -19px;background: #e57200;}
-.section-gallery .carousel-holder .carousel a:after {content: " ";position: absolute;background: url(design/img/eatdrink.png);width: 112px;height: 110px;top: 0;left: 0;border-radius: 10px;overflow: hidden;opacity: 0.4;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+.section-gallery .carousel-holder .carousel a:after {content: " ";position: absolute;background: url(design/img/eatdrink.png);width: 100%;height:  100%;top: 0;left: 0;border-radius: 10px;overflow: hidden;opacity: 0.4;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
 .section-gallery .m-slider{position:relative;display:none;}
 .section-gallery .flex-direction-nav a{opacity:1;}
+
+.tags a{padding:10px;background: #0b7cbf;display: block;float: left;margin-right:1%;text-align:center;padding: 4px 8px 4px 8px;color: white;border-radius: 4px;}
 .
 /*Footer*/
 #colophon{}
@@ -2022,4 +2025,5 @@ div.wpcf7{margin-bottom:0px;}
 	#site-generator .social-holder ul{display: inline-block;margin: 0;padding: 0;width: auto;margin-left: 0px; }
 	.section-ad-contact{display:none;}
 }
+
 @import "./design/css/responsive.less";

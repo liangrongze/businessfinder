@@ -28,13 +28,17 @@ class WpLatteFunctions
 		if(is_plugin_active('wordpress-seo/wp-seo.php')){
 			$return .= wp_title('');
 		} else {
-
+			if( $tags = get_the_tags() ){
+				foreach($tags AS $tag)
+					$return .= " ". $tag->name;
+			}
+			$return .= get_the_title() .' | ';
 			$return .= wp_title('|', false, 'right');
 			$return .= get_bloginfo('name');
 			$site_description = get_bloginfo('description', 'display');
 			if($site_description && (is_home() || is_front_page()))
 				$return .= " | $site_description";
-
+			
 			// Add a page number if necessary:
 			if($paged >= 2 || $page >= 2)
 				$return .= ' | ' . sprintf(__('Page %s', 'ait' ), max($paged, $page));

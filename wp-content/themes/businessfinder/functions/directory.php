@@ -124,7 +124,7 @@ function countItems($category = 0, $location = 0, $search = '') {
  * @param  array   $radius   (radius in km, lat, lon)
  * @return array             items
  */
-function getItems($category = array(), $location = array(), $search = '', $radius = array()) {
+function getItems($category = array(), $location = array(), $search = '', $radius = array(), $tag = '') {
 
 	$params = array(
 		'post_type'			=> 'ait-dir-item',
@@ -149,6 +149,23 @@ function getItems($category = array(), $location = array(), $search = '', $radiu
 			'include_children' => true
 		);*/
 	}
+	
+	if($tag != ''){
+		
+		$taxquery[] = array(
+			'taxonomy' => 'post_tag',
+			'field' => 'slug',
+			'terms' => $tag ? $tag : '',
+			'include_children' => false
+		);
+		
+		/*$taxquery[] = array(
+			'taxonomy' => 'ait-dir-item-category',
+			'field' => 'id',
+			'terms' => $category,
+			'include_children' => true
+		);*/
+	}
 
 	if($location){
 		$taxquery[] = array(
@@ -158,7 +175,7 @@ function getItems($category = array(), $location = array(), $search = '', $radiu
 			'include_children' => true
 		);
 	}
-	if($category != 0 || $location != 0){
+	if($category != 0 || $location != 0 || $tag != ''){
 		$params['tax_query'] = $taxquery;
 	}
 

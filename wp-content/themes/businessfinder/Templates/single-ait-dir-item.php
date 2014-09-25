@@ -71,7 +71,8 @@
 			<div class="details left">
 				<dl class="">
 				            <dd class="address">{$options['address']}</dd>
-							<dd class="address">{$options['telephone']}</dd>
+							<dd class="address">{$options['telephone']} {$options['contact']}</dd>
+							<dd class="address"><a href="mailto:{$options['email']}">{$options['email']}</dd>
  				            <dd class="website"><a href="{$options['web']}" target="_blank">{$options['web']}</a></dd>
 		        </dl>
 					<div class="sl">
@@ -186,5 +187,17 @@
 {/if}
 <!-- End .business-related -->
 
+<?php  if($tags =  get_the_tags() ):?>			
+<div class="section-related tags">
+	<div class="wrapper">
+        <h3>标签</h3>
+		<div>
+			<?php foreach($tags AS $tag):?>
+				<a href="{$homeurl}?s=&locations=0&tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a>
+			<?php endforeach;?>
+		</div>
+	</div>
+</div>
+<?php endif;?>
 {include 'single-js.php'}
 {/block}

@@ -33,6 +33,7 @@ function aitDirItemPostType() {
 				'excerpt',
 				'comments',
 			),
+			 'taxonomies' => array('category', 'post_tag'),
 			'show_ui' => true,
 			'show_in_menu' => true,
 			'menu_icon' => AIT_FRAMEWORK_URL . '/CustomTypes/dir-item/dir-item.png',

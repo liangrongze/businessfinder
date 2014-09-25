@@ -15,8 +15,14 @@ gpsLongitude:
 	label: GPS Longitude
 	type: text
 	default: 0
+contact:
+	label: Contacts
+	type: text
 telephone:
 	label: Telephone
+	type: text
+email:
+	label: Email
 	type: text
 web:
 	label: Web
